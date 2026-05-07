@@ -1,0 +1,68 @@
+{
+  "pillars": [
+    {
+      "slug": "custom-software",
+      "icon": "Boxes",
+      "title": "Custom Software & Enterprise Apps",
+      "tagline": "ERP, CRM, HRMS, and bespoke business platforms — built for how your team actually works.",
+      "summary": "We design, build, and maintain web platforms, mobile apps, SaaS products, and enterprise systems that replace spreadsheets, swivel-chair processes, and shelfware.",
+      "capabilities": [
+        "Web & mobile application development",
+        "ERP / CRM / HRMS implementation & customization",
+        "SaaS product engineering",
+        "API design and system integration",
+        "Legacy modernization"
+      ]
+    },
+    {
+      "slug": "ai-ml-data",
+      "icon": "Sparkles",
+      "title": "AI, ML & Data Solutions",
+      "tagline": "From production LLM workflows to forecasting models — applied AI that earns its keep.",
+      "summary": "We deploy AI, ML, and data analytics solutions that move metrics: customer churn models, document automation, conversational agents, decision intelligence dashboards, and beyond.",
+      "capabilities": [
+        "LLM-based agents & RAG systems",
+        "Predictive ML models & forecasting",
+        "Computer vision & OCR pipelines",
+        "Data engineering & analytics platforms",
+        "MLOps and model lifecycle management"
+      ]
+    },
+    {
+      "slug": "cloud-devops",
+      "icon": "Cloud",
+      "title": "Cloud & DevOps Modernization",
+      "tagline": "Cloud migration, DevOps, and scalable architecture for systems that need to grow.",
+      "summary": "We move workloads to AWS, Azure, and GCP, and put CI/CD, infrastructure-as-code, and observability under them — so that scaling is a deploy, not a project.",
+      "capabilities": [
+        "Cloud migration & re-architecture",
+        "Kubernetes, containers & serverless",
+        "CI/CD pipelines & GitOps",
+        "Infrastructure-as-Code (Terraform, CDK)",
+        "Site Reliability Engineering"
+      ]
+    },
+    {
+      "slug": "cybersecurity",
+      "icon": "ShieldCheck",
+      "title": "Cybersecurity & Managed IT",
+      "tagline": "VAPT, compliance, and 24x7 IT support — security treated as an engineering discipline.",
+      "summary": "We harden applications and infrastructure with VAPT, secure code reviews, compliance readiness, and managed support — covering the gap between auditors, engineers, and operations.",
+      "capabilities": [
+        "Vulnerability assessment & penetration testing (VAPT)",
+        "Secure code review & threat modeling",
+        "ISO 27001 / SOC 2 readiness",
+        "IT infrastructure management & helpdesk",
+        "Incident response & SOC services"
+      ]
+    }
+  ],
+  "emergingTech": [
+    "Artificial Intelligence",
+    "Machine Learning",
+    "Data Analytics",
+    "Blockchain",
+    "Internet of Things (IoT)",
+    "Edge Computing"
+  ]
+}

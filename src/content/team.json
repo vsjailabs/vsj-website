@@ -1,0 +1,28 @@
+{
+  "leadership": [
+    {
+      "slug": "founder",
+      "name": "[Founder Name]",
+      "role": "Founder & CEO",
+      "bio": "[2–3 sentence bio: prior roles, what they're great at, why they started VSJ]",
+      "linkedin": "https://www.linkedin.com/in/...",
+      "placeholder": true
+    },
+    {
+      "slug": "cto",
+      "name": "[CTO Name]",
+      "role": "Chief Technology Officer",
+      "bio": "[Engineering background, domains, what they own at VSJ]",
+      "linkedin": "https://www.linkedin.com/in/...",
+      "placeholder": true
+    },
+    {
+      "slug": "head-of-delivery",
+      "name": "[Head of Delivery]",
+      "role": "Head of Delivery",
+      "bio": "[Delivery experience, industries, what they own at VSJ]",
+      "linkedin": "https://www.linkedin.com/in/...",
+      "placeholder": true
+    }
+  ]
+}

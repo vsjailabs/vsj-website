@@ -1,0 +1,76 @@
+{
+  "details": {
+    "bfsi": {
+      "headline": "AI and software for India's most regulated industry.",
+      "intro": "From RBI-supervised banks to IRDAI-regulated insurers, BFSI customers expect engineering rigor and regulatory traceability in equal measure. We bring both.",
+      "useCases": [
+        "Loan origination and underwriting platforms",
+        "Insurance policy admin and claims systems",
+        "Agency CRMs and partner enablement portals",
+        "Allocation MIS and reconciliation pipelines",
+        "AI-driven fraud and risk-signal models",
+        "Digital onboarding (eKYC, video KYC, eSign)"
+      ],
+      "regulatoryNotes": [
+        "RBI cybersecurity framework alignment",
+        "IRDAI information & cybersecurity guidelines",
+        "DPDPA / GDPR personal data handling",
+        "SOC 2 Type II readiness for SaaS sub-vendors"
+      ],
+      "techExamples": [
+        "Microservices on AWS / Azure with VPC isolation",
+        "Postgres + Redis + Kafka data planes",
+        "OAuth2 / OIDC, mTLS for service-to-service",
+        "Audit logging with WORM storage"
+      ]
+    },
+    "healthcare": {
+      "headline": "Clinical-grade software, engineered for patient data.",
+      "intro": "Healthcare workflows are unforgiving — uptime, audit trails, and data integrity are not optional. We build systems that hold up under HIPAA, NDHM, and clinical scrutiny.",
+      "useCases": [
+        "EMR / EHR integrations (FHIR, HL7)",
+        "Telehealth and asynchronous care platforms",
+        "Clinical analytics and outcome dashboards",
+        "Claims processing and prior-authorization automation",
+        "Document and image OCR (Allotrope-aware)",
+        "Patient-engagement and reminder systems"
+      ],
+      "regulatoryNotes": [
+        "HIPAA-aligned data handling",
+        "NDHM / ABDM compliance",
+        "DPDPA 2023 alignment",
+        "ISO 13485 / IEC 62304 awareness for SaMD"
+      ],
+      "techExamples": [
+        "FHIR R4 / HL7 v2 interfaces",
+        "Encryption at rest + in transit (FIPS-validated where required)",
+        "Audit-ready event sourcing",
+        "Role-based access with break-glass logging"
+      ]
+    },
+    "enterprise-saas": {
+      "headline": "The team behind your roadmap when you need to ship.",
+      "intro": "Whether you're standing up an MVP, scaling a multi-tenant platform, or layering AI on existing workflows — we plug in as a delivery team that ships on your timeline.",
+      "useCases": [
+        "MVP engineering with production-grade fundamentals",
+        "Multi-tenant architecture and data isolation",
+        "AI / LLM features (agents, RAG, copilots)",
+        "Performance and scale-up engineering",
+        "Developer velocity and platform-engineering work",
+        "Migration off legacy and tech-debt remediation"
+      ],
+      "regulatoryNotes": [
+        "SOC 2 Type II readiness",
+        "GDPR / DPDPA personal-data flows",
+        "PCI-DSS scope minimization",
+        "SaaS security posture management"
+      ],
+      "techExamples": [
+        "Next.js, Remix, Django, Spring Boot",
+        "Postgres, ClickHouse, Vector DBs (Pinecone, pgvector)",
+        "Kubernetes, serverless, and edge compute",
+        "OpenTelemetry-first observability"
+      ]
+    }
+  }
+}

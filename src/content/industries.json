@@ -1,0 +1,19 @@
+{
+  "industries": [
+    {
+      "slug": "bfsi",
+      "title": "Banking, Financial Services & Insurance",
+      "blurb": "Loan origination, policy admin, agency CRMs, allocation MIS, compliance reporting, and AI-driven risk and fraud signals — built for RBI/IRDAI scrutiny."
+    },
+    {
+      "slug": "healthcare",
+      "title": "Healthcare & Life Sciences",
+      "blurb": "EMR/EHR integrations, telehealth, clinical analytics, claims automation, and HIPAA-aligned data pipelines — engineered for regulated patient data."
+    },
+    {
+      "slug": "enterprise-saas",
+      "title": "Enterprise SaaS",
+      "blurb": "MVP engineering, multi-tenant architectures, AI features, and scale-up reliability — the team behind your product when in-house can't ship fast enough."
+    }
+  ]
+}

@@ -1,26 +1,177 @@
 @import "tailwindcss";
 
+/* ───────── VSJ AI Labs Brand Tokens (canonical, v4.7 banner spec) ───────── */
 :root {
+  /* Core surfaces */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f1729;          /* official DARK */
+  --surface-1: #ffffff;
+  --surface-2: #faf8f1;            /* official CREAM */
+  --surface-3: #f3efe4;
+  --border: #e6e0cf;
+  --muted: #6b7280;                /* official MEDIUM */
+
+  /* Brand structural palette */
+  --brand-navy: #0e2a47;           /* official NAVY — primary */
+  --brand-navy-2: #143659;
+  --brand-cream: #faf8f1;
+  --brand-teal: #14b8a6;           /* official TEAL — accent rule */
+  --brand-orange: #ea880c;         /* official ORANGE — highlight */
+
+  /* Logo gradient palette (violet → cyan) */
+  --brand-violet: #7c5cff;
+  --brand-violet-2: #6b46e0;
+  --brand-blue: #3b9ae5;
+  --brand-cyan: #38bdf8;
+
+  /* Aliases the existing components reference */
+  --brand-blue-2: #1e6fa8;
+  --brand-accent: #38bdf8;
+  --brand-success: #16a34a;
+  --brand-warning: #ea880c;
+  --brand-danger: #dc2626;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-navy: var(--brand-navy);
+  --color-navy-2: var(--brand-navy-2);
+  --color-cream: var(--brand-cream);
+  --color-teal: var(--brand-teal);
+  --color-orange: var(--brand-orange);
+  --color-violet: var(--brand-violet);
+  --color-cyan: var(--brand-cyan);
+  --color-blue: var(--brand-blue);
+  --color-blue-2: var(--brand-blue-2);
+  --color-accent: var(--brand-accent);
+  --color-success: var(--brand-success);
+  --color-warning: var(--brand-warning);
+  --color-danger: var(--brand-danger);
+  --color-surface-1: var(--surface-1);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #07101f;
+    --foreground: #e9eef7;
+    --surface-1: #0b1a2c;
+    --surface-2: #0e2a47;            /* navy as elevated surface in dark mode */
+    --surface-3: #143659;
+    --border: #1e3252;
+    --muted: #94a3b8;
   }
+}
+
+* {
+  border-color: var(--border);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ───────── Decorative utilities ───────── */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--foreground) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--foreground) 6%, transparent) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* Logo-derived radial fade — violet to cyan, matches the symbol gradient */
+.bg-radial-fade {
+  background:
+    radial-gradient(60% 50% at 50% 0%, color-mix(in oklab, var(--brand-violet) 28%, transparent) 0%, transparent 60%),
+    radial-gradient(45% 35% at 80% 30%, color-mix(in oklab, var(--brand-cyan) 22%, transparent) 0%, transparent 60%);
+}
+
+/* Brand gradient for headlines and pill text */
+.text-gradient-brand {
+  background: linear-gradient(90deg, var(--brand-violet), var(--brand-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Solid brand gradient for CTA panels */
+.bg-gradient-brand {
+  background: linear-gradient(135deg, var(--brand-violet) 0%, var(--brand-blue) 50%, var(--brand-cyan) 100%);
+}
+
+/* Prose styles for legal pages and long-form copy */
+.prose-legal {
+  color: var(--foreground);
+  line-height: 1.7;
+}
+.prose-legal h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+.prose-legal h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+.prose-legal h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.prose-legal p { margin-bottom: 1rem; color: var(--foreground); }
+.prose-legal ul, .prose-legal ol {
+  margin: 1rem 0;
+  padding-left: 1.25rem;
+}
+.prose-legal li { margin: 0.25rem 0; }
+.prose-legal a { color: var(--brand-violet); text-decoration: underline; text-underline-offset: 2px; }
+.prose-legal a:hover { color: var(--brand-violet-2); }
+.prose-legal code {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.9em;
+  background: var(--surface-2);
+  padding: 0.1rem 0.35rem;
+  border-radius: 0.25rem;
+}
+.prose-legal hr {
+  border-color: var(--border);
+  margin: 2rem 0;
+}
+.prose-legal table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.25rem 0;
+  font-size: 0.9rem;
+}
+.prose-legal th, .prose-legal td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+.prose-legal th { background: var(--surface-2); font-weight: 600; }
+.prose-legal .lede {
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin-bottom: 1.5rem;
+}
+.prose-legal .placeholder {
+  background: color-mix(in oklab, var(--brand-orange) 12%, transparent);
+  padding: 0.05rem 0.35rem;
+  border-radius: 0.25rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.85em;
+  color: var(--brand-orange);
 }

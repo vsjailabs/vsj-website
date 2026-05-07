@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "q": "What's a typical engagement size?",
+      "a": "Engagements range from a 4–6 week proof of value to multi-quarter platform builds. Our smallest fixed-scope engagement is a 4-week discovery + design sprint that ends with a costed roadmap you can take anywhere."
+    },
+    {
+      "q": "Do you work fixed-price or time-and-materials?",
+      "a": "Both. Fixed-price for well-scoped phases (especially Discover and Design). Time-and-materials with monthly capped budgets for ongoing build and operate phases. We do not start a fixed-price phase without a signed-off problem statement."
+    },
+    {
+      "q": "Where are your engineers based?",
+      "a": "India-headquartered with delivery for clients in India, the US, the UK, Singapore, and the UAE. We work in your time zone for at least 4 hours of overlap, every working day."
+    },
+    {
+      "q": "Who owns the IP we build together?",
+      "a": "You do. All custom code, designs, and deliverables created during an engagement are work-for-hire owned by the client, transferred under our standard MSA. We retain rights only to generic frameworks, libraries, and tooling we bring in."
+    },
+    {
+      "q": "Can you sign our security and compliance paperwork?",
+      "a": "Yes. We routinely sign DPAs, BAAs (where applicable), MSAs, and InfoSec questionnaires. We're aligned with SOC 2 controls and provide evidence on request. For regulated workloads (BFSI, healthcare), we add tenant-specific controls."
+    },
+    {
+      "q": "How quickly can we start?",
+      "a": "A discovery sprint typically kicks off 2–3 weeks from signed SOW. Build phases scale on team size — we ship a 2-engineer team in 2 weeks, a 6-engineer team in 4 weeks."
+    },
+    {
+      "q": "Do you offer staff augmentation?",
+      "a": "Only as part of an outcome-led engagement. Pure staff aug doesn't get our best engineers and rarely produces good outcomes — we'd rather decline than ship a body shop."
+    }
+  ]
+}

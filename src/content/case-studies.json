@@ -1,0 +1,43 @@
+{
+  "items": [
+    {
+      "slug": "sample-bfsi-allocation-mis",
+      "industry": "BFSI",
+      "title": "[Replace: Allocation MIS for a top-10 life insurer]",
+      "summary": "[One sentence on the problem and the headline outcome — e.g. 'Cut monthly close from 9 days to 2 with a unified allocation MIS across 11 agencies.']",
+      "metrics": [
+        { "value": "~80%", "label": "Reduction in close cycle" },
+        { "value": "11", "label": "Agency files unified" },
+        { "value": "Zero", "label": "Manual reconciliation" }
+      ],
+      "stack": ["Python", "PostgreSQL", "Pandas", "Airflow"],
+      "placeholder": true
+    },
+    {
+      "slug": "sample-healthcare-claims-ai",
+      "industry": "Healthcare",
+      "title": "[Replace: Claims-prior-auth automation for a Tier-1 provider]",
+      "summary": "[One sentence: e.g. 'Cleared a backlog of 40k claims and reduced average prior-auth turnaround from 5 days to 4 hours with an LLM-assisted reviewer.']",
+      "metrics": [
+        { "value": "30×", "label": "Faster turnaround" },
+        { "value": "40k+", "label": "Claims cleared" },
+        { "value": "98%", "label": "Reviewer agreement" }
+      ],
+      "stack": ["Python", "OpenAI", "FHIR", "AWS"],
+      "placeholder": true
+    },
+    {
+      "slug": "sample-saas-multi-tenant",
+      "industry": "Enterprise SaaS",
+      "title": "[Replace: Multi-tenant scale-up for a Series B platform]",
+      "summary": "[One sentence: e.g. 'Re-architected a single-tenant Postgres into a 200-tenant managed platform, cutting cost-per-tenant by 60%.']",
+      "metrics": [
+        { "value": "200+", "label": "Tenants on day one" },
+        { "value": "−60%", "label": "Cost per tenant" },
+        { "value": "p99 < 300ms", "label": "API latency" }
+      ],
+      "stack": ["Next.js", "PostgreSQL", "Kubernetes", "OpenTelemetry"],
+      "placeholder": true
+    }
+  ]
+}

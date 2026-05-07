@@ -1,0 +1,68 @@
+{
+  "clients": [
+    { "name": "Client logo 1", "placeholder": true },
+    { "name": "Client logo 2", "placeholder": true },
+    { "name": "Client logo 3", "placeholder": true },
+    { "name": "Client logo 4", "placeholder": true },
+    { "name": "Client logo 5", "placeholder": true },
+    { "name": "Client logo 6", "placeholder": true }
+  ],
+  "certifications": [
+    {
+      "title": "MSME Registered",
+      "subtitle": "Udyam Registration",
+      "status": "active",
+      "note": "Replace with your Udyam number when issued."
+    },
+    {
+      "title": "Startup India Recognized",
+      "subtitle": "DPIIT Certificate",
+      "status": "in-progress",
+      "note": "Apply via startupindia.gov.in (free); shows on government tenders."
+    },
+    {
+      "title": "ISO 27001 Readiness",
+      "subtitle": "Information Security",
+      "status": "in-progress",
+      "note": "Aim for first audit ~6–9 months in; required for many BFSI tenders."
+    },
+    {
+      "title": "SOC 2 Type II Aligned",
+      "subtitle": "Trust Services Criteria",
+      "status": "planned",
+      "note": "Required for US enterprise SaaS clients."
+    },
+    {
+      "title": "NASSCOM Member",
+      "subtitle": "Industry Body",
+      "status": "planned",
+      "note": "Optional; signals presence to enterprise buyers in India."
+    },
+    {
+      "title": "DPDPA-Aligned",
+      "subtitle": "India Data Protection",
+      "status": "active",
+      "note": "Stated posture; codified in privacy policy."
+    }
+  ],
+  "testimonials": [
+    {
+      "placeholder": true,
+      "quote": "Replace with a real client testimonial. Aim for one specific outcome (a metric moved, a deadline met, a problem prevented) plus the relationship feel.",
+      "author": "Client name, Title",
+      "company": "Company"
+    },
+    {
+      "placeholder": true,
+      "quote": "Replace with a second testimonial — ideally from a different industry pillar (BFSI vs Healthcare vs SaaS) to show breadth.",
+      "author": "Client name, Title",
+      "company": "Company"
+    },
+    {
+      "placeholder": true,
+      "quote": "Replace with a third testimonial — bonus points for a video link.",
+      "author": "Client name, Title",
+      "company": "Company"
+    }
+  ]
+}
