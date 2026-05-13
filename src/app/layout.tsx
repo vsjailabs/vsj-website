@@ -72,10 +72,10 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
+      { url: "/brand/logo-on-white.png", type: "image/png", sizes: "640x640" },
       { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon.svg", type: "image/svg+xml" },
     ],
-    apple: "/apple-icon.png",
+    apple: "/brand/logo-on-white.png",
   },
   manifest: "/manifest.webmanifest",
   robots: {
