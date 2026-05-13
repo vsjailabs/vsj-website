@@ -6,7 +6,7 @@ export const site = {
   description:
     "VSJ AI Labs builds compliance-first AI, custom software, and cloud platforms for BFSI, healthcare, and enterprise SaaS leaders.",
   url: "https://vsjailabs.com",
-  email: "contact@vsjailabs.com",
+  email: "support@vsjailabs.com",
   phone: "+91 62805 97727",
   cin: "U62013BR2026PTC084210",
   gstin: "10AAMCV0989J1ZZ",
