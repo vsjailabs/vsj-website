@@ -33,8 +33,10 @@ export default function ContactPage() {
 
       <section className="py-20">
         <Container>
-          <div className="grid gap-12 lg:grid-cols-5">
-            <aside className="lg:col-span-2 space-y-4">
+          <div className="max-w-3xl mx-auto space-y-12">
+            <ContactForm />
+
+            <div className="grid gap-4 sm:grid-cols-2">
               <ContactCard icon={Mail} label="Email">
                 <a
                   href={`mailto:${site.email}`}
@@ -79,9 +81,7 @@ export default function ContactPage() {
                   <div>GSTIN {site.gstin}</div>
                 </div>
               </ContactCard>
-            </aside>
-
-            <ContactForm />
+            </div>
           </div>
         </Container>
       </section>

@@ -63,7 +63,7 @@ export function ContactForm() {
       <div
         role="status"
         aria-live="polite"
-        className="lg:col-span-3 rounded-xl border border-(--border) bg-(--surface-1) p-8"
+        className="rounded-xl border border-(--border) bg-(--surface-1) p-8"
       >
         <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal) mb-3">
           Message received
@@ -83,7 +83,7 @@ export function ContactForm() {
     <form
       onSubmit={onSubmit}
       noValidate
-      className="lg:col-span-3 rounded-xl border border-(--border) bg-(--surface-1) p-6 sm:p-8 space-y-5"
+      className="rounded-xl border border-(--border) bg-(--surface-1) p-6 sm:p-8 space-y-5"
     >
       {/* Honeypot — visually hidden, must remain empty */}
       <div aria-hidden className="absolute -left-[10000px] w-px h-px overflow-hidden">
