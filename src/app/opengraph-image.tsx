@@ -1,16 +1,18 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { site } from "@/lib/site";
 
 export const alt = `${site.brand} — ${site.tagline}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-/**
- * Default OG image for the entire site. Rendered as a 1200×630 PNG at
- * build time using a Next.js Edge runtime. To override per-route, place
- * a file named `opengraph-image.tsx` inside that route's folder.
- */
-export default function OpengraphImage() {
+export default async function OpengraphImage() {
+  const data = await readFile(
+    join(process.cwd(), "public/brand/logo-on-black.png")
+  );
+  const logoSrc = `data:image/png;base64,${data.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -27,7 +29,6 @@ export default function OpengraphImage() {
           fontFamily: "system-ui, sans-serif",
         }}
       >
-        {/* Decorative gradient blob */}
         <div
           style={{
             position: "absolute",
@@ -43,25 +44,8 @@ export default function OpengraphImage() {
           }}
         />
 
-        {/* Header row */}
         <div style={{ display: "flex", alignItems: "center", gap: 18 }}>
-          <div
-            style={{
-              width: 56,
-              height: 56,
-              borderRadius: 16,
-              background:
-                "linear-gradient(135deg, #7c5cff 0%, #38bdf8 100%)",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: 30,
-              fontWeight: 700,
-              color: "#0e2a47",
-            }}
-          >
-            V
-          </div>
+          <img src={logoSrc} width={80} height={80} />
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div style={{ fontSize: 28, fontWeight: 600, letterSpacing: -0.4 }}>
               {site.brand}
@@ -79,7 +63,6 @@ export default function OpengraphImage() {
           </div>
         </div>
 
-        {/* Headline */}
         <div style={{ display: "flex", flexDirection: "column", gap: 24 }}>
           <div
             style={{
@@ -105,7 +88,6 @@ export default function OpengraphImage() {
           </div>
         </div>
 
-        {/* Footer row */}
         <div
           style={{
             display: "flex",

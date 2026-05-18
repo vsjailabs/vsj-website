@@ -1,9 +1,16 @@
 import { ImageResponse } from "next/og";
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
-export default function AppleIcon() {
+export default async function AppleIcon() {
+  const data = await readFile(
+    join(process.cwd(), "public/brand/logo-on-white.png")
+  );
+  const src = `data:image/png;base64,${data.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -13,15 +20,10 @@ export default function AppleIcon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          fontSize: 110,
-          fontWeight: 700,
-          color: "#0e2a47",
-          background:
-            "linear-gradient(135deg, #7c5cff 0%, #38bdf8 100%)",
-          borderRadius: 36,
+          background: "#ffffff",
         }}
       >
-        V
+        <img src={src} width={170} height={170} />
       </div>
     ),
     { ...size }
