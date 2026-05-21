@@ -5,6 +5,7 @@ import { Container } from "@/components/ui/Container";
 import { CTASection } from "@/components/site/CTASection";
 import cases from "@/content/case-studies.json";
 import { site } from "@/lib/site";
+import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Case Studies",
@@ -15,6 +16,15 @@ export const metadata: Metadata = {
 export default function CaseStudiesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(
+          breadcrumbJsonLd([
+            { name: "Home", href: "/" },
+            { name: "Case Studies", href: "/case-studies" },
+          ])
+        )}
+      />
       <section className="relative overflow-hidden border-b border-(--border)">
         <div className="absolute inset-0 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]" />
         <Container className="relative pt-20 pb-16">

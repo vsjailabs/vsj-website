@@ -77,21 +77,42 @@ export async function POST(req: Request) {
     return NextResponse.json({ errors }, { status: 422 });
   }
 
-  // ─────────────── TODO: send via your email provider ───────────────
-  // Example with Resend (npm i resend):
-  //
-  // import { Resend } from "resend";
-  // const resend = new Resend(process.env.RESEND_API_KEY!);
-  // await resend.emails.send({
-  //   from: process.env.RESEND_FROM!,
-  //   to: site.email,
-  //   replyTo: email,
-  //   subject: `[Site] ${subject}`,
-  //   text: [`From: ${name} <${email}>`, `Company: ${company || "—"}`, `Phone: ${phone || "—"}`, "", message].join("\n"),
-  // });
+  // ─────────────── Email delivery via Resend ───────────────
+  const resendKey = process.env.RESEND_API_KEY;
+  const resendFrom = process.env.RESEND_FROM;
 
-  if (process.env.NODE_ENV !== "production") {
-    console.log("[contact form]", {
+  if (resendKey && resendFrom) {
+    try {
+      const res = await fetch("https://api.resend.com/emails", {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${resendKey}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          from: resendFrom,
+          to: site.email,
+          reply_to: email,
+          subject: `[Site] ${subject}`,
+          text: [
+            `From: ${name} <${email}>`,
+            `Company: ${company || "—"}`,
+            `Phone: ${phone || "—"}`,
+            "",
+            message,
+          ].join("\n"),
+        }),
+      });
+
+      if (!res.ok) {
+        console.error("[contact] Resend error:", res.status, await res.text());
+      }
+    } catch (err) {
+      console.error("[contact] Resend send failed:", err);
+    }
+  } else {
+    // Fallback: log to console when Resend is not configured
+    console.log("[contact form — email not configured]", {
       to: site.email,
       from: { name, email, company, phone },
       subject,

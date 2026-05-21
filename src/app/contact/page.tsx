@@ -3,6 +3,7 @@ import { Mail, MapPin, Phone, Calendar } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { ContactForm } from "@/components/site/ContactForm";
 import { site } from "@/lib/site";
+import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -13,6 +14,15 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(
+          breadcrumbJsonLd([
+            { name: "Home", href: "/" },
+            { name: "Contact", href: "/contact" },
+          ])
+        )}
+      />
       <section className="relative overflow-hidden border-b border-(--border)">
         <div className="absolute inset-0 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]" />
         <Container className="relative pt-20 pb-16">

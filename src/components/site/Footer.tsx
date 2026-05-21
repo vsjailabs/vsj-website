@@ -26,7 +26,7 @@ export function Footer() {
       <Container className="py-14">
         <div className="grid gap-10 md:grid-cols-6">
           <div className="md:col-span-2 max-w-md">
-            <Logo size={56} />
+            <Logo size={56} priority={false} />
             <p className="mt-4 text-sm text-(--muted) leading-relaxed">
               {site.description}
             </p>
@@ -121,9 +121,9 @@ export function Footer() {
             © {year} {site.legalName}. All rights reserved.
           </div>
           <div className="flex items-center gap-4">
-            <a href={site.socials.linkedin} className="hover:text-(--foreground)">LinkedIn</a>
-            <a href={site.socials.github} className="hover:text-(--foreground)">GitHub</a>
-            <a href={site.socials.x} className="hover:text-(--foreground)">X</a>
+            <a href={site.socials.linkedin} target="_blank" rel="noopener me" aria-label="VSJ AI Labs on LinkedIn" className="hover:text-(--foreground)">LinkedIn</a>
+            <a href={site.socials.github} target="_blank" rel="noopener me" aria-label="VSJ AI Labs on GitHub" className="hover:text-(--foreground)">GitHub</a>
+            <a href={site.socials.x} target="_blank" rel="noopener me" aria-label="VSJ AI Labs on X" className="hover:text-(--foreground)">X</a>
           </div>
         </div>
       </Container>

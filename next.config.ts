@@ -44,9 +44,9 @@ const securityHeaders = [
   },
   // Cross-origin isolation hints
   { key: "X-DNS-Prefetch-Control", value: "on" },
-  // Report-Only CSP — promote to enforced after monitoring
+  // Enforced CSP — promoted from Report-Only on 2026-05-21
   {
-    key: "Content-Security-Policy-Report-Only",
+    key: "Content-Security-Policy",
     value: cspDirectives,
   },
 ];

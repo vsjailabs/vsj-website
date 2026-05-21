@@ -3,6 +3,7 @@ import { Container } from "@/components/ui/Container";
 import { CTASection } from "@/components/site/CTASection";
 import team from "@/content/team.json";
 import { site } from "@/lib/site";
+import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Team",
@@ -13,6 +14,15 @@ export const metadata: Metadata = {
 export default function TeamPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(
+          breadcrumbJsonLd([
+            { name: "Home", href: "/" },
+            { name: "Team", href: "/team" },
+          ])
+        )}
+      />
       <section className="relative overflow-hidden border-b border-(--border)">
         <div className="absolute inset-0 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]" />
         <Container className="relative pt-20 pb-16">
@@ -55,6 +65,9 @@ export default function TeamPage() {
                   {p.linkedin && (
                     <a
                       href={p.linkedin}
+                      target="_blank"
+                      rel="noopener"
+                      aria-label={`${p.name} on LinkedIn`}
                       className="mt-4 inline-flex items-center gap-1.5 text-xs text-(--muted) hover:text-(--brand-violet)"
                     >
                       <svg

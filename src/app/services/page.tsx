@@ -5,16 +5,28 @@ import { ServicePillars } from "@/components/site/ServicePillars";
 import { EmergingTech } from "@/components/site/EmergingTech";
 import { CTASection } from "@/components/site/CTASection";
 import servicesData from "@/content/services.json";
+import { site } from "@/lib/site";
+import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
     "Custom software, AI/ML, cloud & DevOps, and cybersecurity services from VSJ AI Labs.",
+  alternates: { canonical: `${site.url}/services` },
 };
 
 export default function ServicesPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(
+          breadcrumbJsonLd([
+            { name: "Home", href: "/" },
+            { name: "Services", href: "/services" },
+          ])
+        )}
+      />
       <section className="relative overflow-hidden border-b border-(--border)">
         <div className="absolute inset-0 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]" />
         <Container className="relative pt-20 pb-16">

@@ -3,11 +3,14 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CTASection } from "@/components/site/CTASection";
 import { Stats } from "@/components/site/Stats";
+import { site } from "@/lib/site";
+import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
   title: "About",
   description:
     "VSJ AI Labs is an India-headquartered technology services company building software, AI, and cloud systems for global enterprises.",
+  alternates: { canonical: `${site.url}/about` },
 };
 
 const values = [
@@ -32,6 +35,15 @@ const values = [
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(
+          breadcrumbJsonLd([
+            { name: "Home", href: "/" },
+            { name: "About", href: "/about" },
+          ])
+        )}
+      />
       <section className="relative overflow-hidden border-b border-(--border)">
         <div className="absolute inset-0 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]" />
         <Container className="relative pt-20 pb-20">
