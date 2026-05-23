@@ -1,57 +1,55 @@
 import Image from "next/image";
 import { site } from "@/lib/site";
 
+/**
+ * Brand logo with automatic light/dark mode switching.
+ *
+ * Asset mapping:
+ *   Light mode → /brand/logo-horizontal-light.png (dark text, for light backgrounds)
+ *   Dark mode  → /brand/logo-horizontal-dark.png  (white text, for dark backgrounds)
+ */
+
+/** Logo for light backgrounds (dark text) — shown in light mode */
+const HORIZONTAL_FOR_LIGHT_BG = "/brand/logo-horizontal-light.png";
+/** Logo for dark backgrounds (white text) — shown in dark mode */
+const HORIZONTAL_FOR_DARK_BG = "/brand/logo-horizontal-dark.png";
+
 export function Logo({
   className = "",
-  layout = "horizontal",
   size = 36,
   priority = true,
 }: {
   className?: string;
-  /** "horizontal" uses the wide wordmark; "stacked" uses the square logo. */
-  layout?: "horizontal" | "stacked";
   size?: number;
   /** Set false for below-fold logos (e.g. Footer) to avoid unnecessary preloads. */
   priority?: boolean;
 }) {
   const sizeVar = { ["--logo-size" as string]: `${size}px` };
-
-  if (layout === "horizontal") {
-    return (
-      <>
-        {/* Light mode — dark text logo */}
-        <Image
-          src="/brand/logo-horizontal.png"
-          alt={site.brand}
-          width={Math.round(size * 3.1)}
-          height={size}
-          priority={priority}
-          className={`block dark:hidden h-[var(--logo-size)] w-auto ${className}`}
-          style={sizeVar}
-        />
-        {/* Dark mode — light text stacked logo (no horizontal-light variant yet) */}
-        <Image
-          src="/brand/logo-on-black.png"
-          alt={site.brand}
-          width={size}
-          height={size}
-          priority={priority}
-          className={`hidden dark:block h-[var(--logo-size)] w-auto ${className}`}
-          style={sizeVar}
-        />
-      </>
-    );
-  }
+  const w = Math.round(size * 3.1);
+  const cls = `h-[var(--logo-size)] w-auto ${className}`;
 
   return (
-    <Image
-      src="/brand/logo-on-white.png"
-      alt={site.brand}
-      width={size}
-      height={size}
-      priority={priority}
-      className={`h-[var(--logo-size)] w-auto ${className}`}
-      style={sizeVar}
-    />
+    <>
+      {/* Light mode — dark text on light backgrounds */}
+      <Image
+        src={HORIZONTAL_FOR_LIGHT_BG}
+        alt={site.brand}
+        width={w}
+        height={size}
+        priority={priority}
+        className={`block dark:hidden ${cls}`}
+        style={sizeVar}
+      />
+      {/* Dark mode — white text on dark backgrounds */}
+      <Image
+        src={HORIZONTAL_FOR_DARK_BG}
+        alt={site.brand}
+        width={w}
+        height={size}
+        priority={priority}
+        className={`hidden dark:block ${cls}`}
+        style={sizeVar}
+      />
+    </>
   );
 }
