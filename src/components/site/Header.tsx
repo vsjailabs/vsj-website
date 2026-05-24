@@ -24,8 +24,20 @@ export function Header() {
     <header className="sticky top-0 z-40 border-b border-(--border) bg-(--surface-1)/85 backdrop-blur supports-[backdrop-filter]:bg-(--surface-1)/70">
       <Container>
         <div className="flex h-16 items-center justify-between">
-          <Link href="/" aria-label={site.brand} className="shrink-0">
-            <Logo size={44} />
+          <Link href="/" aria-label={site.brand} className="shrink-0 group">
+            <span
+              className={[
+                "inline-block",
+                // Entrance on first paint (motion-safe respects prefers-reduced-motion)
+                "motion-safe:animate-logo-in",
+                // Hover: subtle lift; Active: bounce back. Transform-only animation = GPU-friendly.
+                "transition-transform duration-300 ease-out",
+                "motion-safe:group-hover:scale-[1.04]",
+                "motion-safe:group-active:scale-100",
+              ].join(" ")}
+            >
+              <Logo size={44} />
+            </span>
           </Link>
 
           <nav className="hidden md:flex items-center gap-1">
