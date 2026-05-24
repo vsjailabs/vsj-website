@@ -71,9 +71,11 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"],
   },
   icons: {
+    // The favicon.ico is auto-linked by Next.js from app/favicon.ico (with
+    // cache-busting hash) — no need to list it here. This block adds the
+    // brand logo as the high-res icon and the Apple touch icon.
     icon: [
       { url: "/brand/logo-on-white.png", type: "image/png", sizes: "640x640" },
-      { url: "/favicon.ico", sizes: "any" },
     ],
     apple: "/brand/logo-on-white.png",
   },
