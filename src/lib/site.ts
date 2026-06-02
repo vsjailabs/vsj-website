@@ -5,7 +5,10 @@ export const site = {
   promise: "Compliance-first AI for regulated industries.",
   description:
     "VSJ AI Labs builds compliance-first AI, custom software, and cloud platforms for BFSI, healthcare, and enterprise SaaS leaders.",
-  url: "https://vsjailabs.com",
+  // Resolved at build time. NEXT_PUBLIC_SITE_URL is set per-context in
+  // netlify.toml so deploy previews advertise their own canonical URL
+  // instead of leaking content under the production canonical.
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://vsjailabs.com",
   email: "support@vsjailabs.com",
   phone: "+91 62805 97727",
   cin: "U62013BR2026PTC084210",
