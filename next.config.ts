@@ -58,12 +58,6 @@ const nextConfig: NextConfig = {
   // Enable React's strict double-render in dev
   reactStrictMode: true,
 
-  // Tree-shake icon barrels so only the imported lucide glyphs ship — addresses
-  // PageSpeed "Reduce unused JavaScript" (~27 KiB) finding.
-  experimental: {
-    optimizePackageImports: ["lucide-react"],
-  },
-
   images: {
     formats: ["image/avif", "image/webp"],
     // Allow remote brand assets later (e.g., CDN-hosted partner logos)
