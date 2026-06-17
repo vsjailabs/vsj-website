@@ -110,7 +110,7 @@ export default async function ServiceDetailPage({
                   <ArrowRight size={16} />
                 </Button>
                 <Button href="/services" variant="secondary">
-                  See all services
+                  View all four service pillars
                 </Button>
               </div>
             </div>

@@ -56,8 +56,8 @@ export function ServicePillars({
                     href={`/services/${pillar.slug}`}
                     className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-(--brand-violet) hover:text-(--brand-violet-2)"
                   >
-                    Learn more
-                    <ArrowUpRight size={14} />
+                    Explore {pillar.title}
+                    <ArrowUpRight size={14} aria-hidden="true" />
                   </Link>
                 )}
               </article>

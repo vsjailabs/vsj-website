@@ -33,7 +33,7 @@ export function Hero() {
               <ArrowRight size={16} />
             </Button>
             <Button href="/services" variant="secondary" size="lg">
-              Explore services
+              Browse AI &amp; engineering services
             </Button>
           </div>
 
