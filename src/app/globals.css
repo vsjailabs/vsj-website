@@ -15,7 +15,8 @@
   --brand-navy: #0e2a47;           /* official NAVY — primary */
   --brand-navy-2: #143659;
   --brand-cream: #faf8f1;
-  --brand-teal: #14b8a6;           /* official TEAL — accent rule */
+  --brand-teal: #14b8a6;           /* official TEAL — for backgrounds, dots, borders */
+  --brand-teal-text: #0f766e;      /* accessible teal for text foreground — 5.83:1 on white */
   --brand-orange: #ea880c;         /* official ORANGE — highlight */
 
   /* Logo gradient palette (violet → cyan) */
@@ -39,6 +40,7 @@
   --color-navy-2: var(--brand-navy-2);
   --color-cream: var(--brand-cream);
   --color-teal: var(--brand-teal);
+  --color-teal-text: var(--brand-teal-text);
   --color-orange: var(--brand-orange);
   --color-violet: var(--brand-violet);
   --color-cyan: var(--brand-cyan);

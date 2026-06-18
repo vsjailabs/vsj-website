@@ -15,7 +15,7 @@ const iconByTitle: Record<string, LucideIcon> = {
 const statusStyle: Record<string, { label: string; cls: string }> = {
   active: {
     label: "Active",
-    cls: "bg-(--brand-teal)/10 text-(--brand-teal) border-(--brand-teal)/30",
+    cls: "bg-(--brand-teal)/10 text-(--brand-teal-text) border-(--brand-teal)/30",
   },
   "in-progress": {
     label: "In progress",

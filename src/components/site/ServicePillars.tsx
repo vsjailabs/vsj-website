@@ -54,7 +54,7 @@ export function ServicePillars({
                 {withLinks && (
                   <Link
                     href={`/services/${pillar.slug}`}
-                    className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-(--brand-violet) hover:text-(--brand-violet-2)"
+                    className="mt-6 inline-flex items-center gap-1 text-sm font-medium text-(--brand-violet-2) hover:text-(--brand-violet)"
                   >
                     Explore {pillar.title}
                     <ArrowUpRight size={14} aria-hidden="true" />

@@ -27,7 +27,7 @@ export default function TeamPage() {
         <div className="absolute inset-0 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]" />
         <Container className="relative pt-20 pb-16">
           <div className="max-w-3xl">
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal) mb-3">
+            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text) mb-3">
               Team
             </div>
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-balance">
@@ -56,7 +56,7 @@ export default function TeamPage() {
                   <div className="text-base font-semibold tracking-tight">
                     {p.name}
                   </div>
-                  <div className="text-xs text-(--brand-teal) font-medium uppercase tracking-wider mt-0.5">
+                  <div className="text-xs text-(--brand-teal-text) font-medium uppercase tracking-wider mt-0.5">
                     {p.role}
                   </div>
                   <p className="mt-3 text-sm text-(--muted) leading-relaxed">

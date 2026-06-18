@@ -81,7 +81,7 @@ export default async function IndustryDetailPage({
           </Link>
 
           <div className="max-w-3xl">
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal) mb-3">
+            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text) mb-3">
               {ind.title}
             </div>
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-balance">
@@ -107,7 +107,7 @@ export default async function IndustryDetailPage({
         <Container>
           <div className="grid lg:grid-cols-3 gap-10 lg:gap-14">
             <div className="lg:col-span-1">
-              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal) mb-3">
+              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text) mb-3">
                 Where we plug in
               </div>
               <h2 className="text-2xl font-semibold tracking-tight">
@@ -133,7 +133,7 @@ export default async function IndustryDetailPage({
         <Container>
           <div className="grid md:grid-cols-2 gap-10">
             <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal) mb-3">
+              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text) mb-3">
                 Regulatory posture
               </div>
               <h3 className="text-xl font-semibold tracking-tight mb-5">
@@ -149,7 +149,7 @@ export default async function IndustryDetailPage({
               </ul>
             </div>
             <div>
-              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal) mb-3">
+              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text) mb-3">
                 Tech we&apos;ve shipped
               </div>
               <h3 className="text-xl font-semibold tracking-tight mb-5">
@@ -170,7 +170,7 @@ export default async function IndustryDetailPage({
 
       <section className="py-20">
         <Container>
-          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal) mb-3">
+          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text) mb-3">
             Other industries
           </div>
           <h2 className="text-2xl font-semibold tracking-tight mb-8">

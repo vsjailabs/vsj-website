@@ -27,7 +27,7 @@ export default function ContactPage() {
         <div className="absolute inset-0 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]" />
         <Container className="relative pt-20 pb-16">
           <div className="max-w-3xl">
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal) mb-3">
+            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text) mb-3">
               Contact
             </div>
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-balance">

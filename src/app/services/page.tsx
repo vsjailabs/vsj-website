@@ -58,7 +58,7 @@ export default function ServicesPage() {
                   </p>
                 </div>
                 <div className="lg:col-span-2">
-                  <div className="text-xs font-semibold uppercase tracking-wider text-(--brand-teal) mb-4">
+                  <div className="text-xs font-semibold uppercase tracking-wider text-(--brand-teal-text) mb-4">
                     Capabilities
                   </div>
                   <ul className="grid sm:grid-cols-2 gap-3">

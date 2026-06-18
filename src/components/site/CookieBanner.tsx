@@ -100,7 +100,7 @@ export function CookieBanner() {
                 <div className="font-medium">Essential</div>
                 <div className="text-(--muted)">Always on. Required.</div>
               </div>
-              <span className="text-(--brand-teal) font-medium">On</span>
+              <span className="text-(--brand-teal-text) font-medium">On</span>
             </div>
             <label className="flex items-center justify-between rounded-md bg-(--surface-2) px-3 py-2 cursor-pointer">
               <div>

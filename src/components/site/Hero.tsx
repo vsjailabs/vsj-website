@@ -40,7 +40,7 @@ export function Hero() {
           <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs uppercase tracking-[0.18em] text-(--muted)">
             {site.practices.map((p, i) => (
               <span key={p} className="flex items-center gap-x-3">
-                {i > 0 && <span className="text-(--brand-teal)">·</span>}
+                {i > 0 && <span className="text-(--brand-teal-text)">·</span>}
                 {p}
               </span>
             ))}

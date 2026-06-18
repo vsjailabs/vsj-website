@@ -65,7 +65,7 @@ export function ContactForm() {
         aria-live="polite"
         className="rounded-xl border border-(--border) bg-(--surface-1) p-8"
       >
-        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal) mb-3">
+        <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text) mb-3">
           Message received
         </div>
         <h2 className="text-2xl font-semibold tracking-tight">

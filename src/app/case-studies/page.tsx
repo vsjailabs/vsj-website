@@ -29,7 +29,7 @@ export default function CaseStudiesPage() {
         <div className="absolute inset-0 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]" />
         <Container className="relative pt-20 pb-16">
           <div className="max-w-3xl">
-            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal) mb-3">
+            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text) mb-3">
               Case Studies
             </div>
             <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-balance">
@@ -51,7 +51,7 @@ export default function CaseStudiesPage() {
                 key={c.slug}
                 className="group flex flex-col rounded-xl border border-(--border) bg-(--surface-1) p-6 hover:border-(--brand-violet)/40 transition-colors"
               >
-                <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-(--brand-teal)">
+                <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text)">
                   {c.industry}
                 </div>
                 <h3 className="mt-3 text-base sm:text-lg font-semibold tracking-tight leading-snug">
@@ -109,7 +109,7 @@ export default function CaseStudiesPage() {
             </div>
             <Link
               href="/contact"
-              className="inline-flex items-center gap-1.5 text-(--brand-violet) hover:text-(--brand-violet-2) font-medium"
+              className="inline-flex items-center gap-1.5 text-(--brand-violet-2) hover:text-(--brand-violet) font-medium"
             >
               Send a brief
               <ArrowUpRight size={14} />

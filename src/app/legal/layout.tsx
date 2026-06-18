@@ -17,7 +17,7 @@ export default function LegalLayout({ children }: { children: React.ReactNode })
     <Container className="py-16 sm:py-20">
       <div className="grid gap-12 lg:grid-cols-4">
         <aside className="lg:col-span-1">
-          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal) mb-3">
+          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text) mb-3">
             Legal
           </div>
           <nav className="space-y-1">

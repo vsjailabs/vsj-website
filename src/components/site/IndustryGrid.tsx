@@ -21,7 +21,7 @@ export function IndustryGrid() {
               href={`/industries/${ind.slug}`}
               className="group bg-(--surface-1) p-7 transition-colors hover:bg-(--surface-2)"
             >
-              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal)">
+              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text)">
                 {ind.slug.replace(/-/g, " ")}
               </div>
               <h3 className="mt-3 text-lg font-semibold tracking-tight flex items-start justify-between gap-3">

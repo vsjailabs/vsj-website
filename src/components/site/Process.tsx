@@ -72,7 +72,7 @@ export function Process() {
                   <div className="grid place-items-center w-11 h-11 rounded-lg bg-(--brand-violet)/10 text-(--brand-violet)">
                     <Icon size={22} strokeWidth={1.75} />
                   </div>
-                  <span className="font-mono text-sm text-(--brand-teal)">
+                  <span className="font-mono text-sm text-(--brand-teal-text)">
                     {s.num}
                   </span>
                 </div>
@@ -86,7 +86,7 @@ export function Process() {
                   {s.body}
                 </p>
                 <div className="mt-5 pt-5 border-t border-(--border)">
-                  <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-(--brand-teal) mb-2">
+                  <div className="text-[10px] font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text) mb-2">
                     Outputs
                   </div>
                   <ul className="space-y-1.5">

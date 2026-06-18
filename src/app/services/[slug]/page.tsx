@@ -95,7 +95,7 @@ export default async function ServiceDetailPage({
               <div className="grid place-items-center w-12 h-12 rounded-xl bg-(--brand-violet)/10 text-(--brand-violet) mb-5">
                 <Icon size={24} strokeWidth={1.75} />
               </div>
-              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal) mb-3">
+              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text) mb-3">
                 Service
               </div>
               <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight text-balance">
@@ -116,7 +116,7 @@ export default async function ServiceDetailPage({
             </div>
 
             <aside className="lg:col-span-1 rounded-xl border border-(--border) bg-(--surface-1) p-6">
-              <div className="text-xs font-semibold uppercase tracking-wider text-(--brand-teal) mb-3">
+              <div className="text-xs font-semibold uppercase tracking-wider text-(--brand-teal-text) mb-3">
                 At a glance
               </div>
               <dl className="space-y-3 text-sm">
@@ -146,7 +146,7 @@ export default async function ServiceDetailPage({
         <Container>
           <div className="grid lg:grid-cols-3 gap-10 lg:gap-14">
             <div className="lg:col-span-1">
-              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal) mb-3">
+              <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text) mb-3">
                 What we deliver
               </div>
               <h2 className="text-2xl font-semibold tracking-tight">
@@ -176,7 +176,7 @@ export default async function ServiceDetailPage({
 
       <section className="py-20 border-y border-(--border) bg-(--surface-2)">
         <Container>
-          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal) mb-3">
+          <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text) mb-3">
             Other practices
           </div>
           <h2 className="text-2xl font-semibold tracking-tight mb-8">
