@@ -58,6 +58,14 @@ const nextConfig: NextConfig = {
   // Enable React's strict double-render in dev
   reactStrictMode: true,
 
+  // Inline Tailwind's atomic CSS into the document head. Removes the
+  // render-blocking <link> round-trip flagged by PageSpeed (~120ms) and
+  // eliminates the FOUT window that was driving CLS via font-swap.
+  // Production-only — dev still uses external <link> for HMR.
+  experimental: {
+    inlineCss: true,
+  },
+
   images: {
     formats: ["image/avif", "image/webp"],
     // Allow remote brand assets later (e.g., CDN-hosted partner logos)

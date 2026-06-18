@@ -16,7 +16,7 @@ export function Hero() {
             {site.promise}
           </div>
 
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-balance text-(--brand-navy) dark:text-(--foreground)">
+          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-(--brand-navy) dark:text-(--foreground)">
             Wisdom Served Sweet —{" "}
             <span className="text-gradient-brand">AI engineered</span> for regulated industries.
           </h1>
