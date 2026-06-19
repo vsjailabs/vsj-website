@@ -35,20 +35,23 @@
       "linkedin": null
     },
     {
-      "slug": "yogesh-uppadhaya",
-      "name": "Yogesh Uppadhaya",
+      "slug": "yogesh-kumar-upadhyay",
+      "name": "Yogesh Kumar Upadhyay",
       "role": "Head of Delivery",
       "initials": "YU",
-      "bio": "Yogesh oversees project execution, delivery governance, and customer engagement across every client program. He ensures on-time delivery, operational excellence, risk management, and tight collaboration between business and technology teams — so engagements stay predictable from kickoff to handover.",
+      "bio": "Yogesh brings 11+ years of hands-on engineering across Banking and Insurance — including microservices for Max Life Insurance policy management at Infosys, partner-bank integrations with Axis and Yes Bank, and cloud-native platforms at Hexaware. At VSJ AI Labs he owns delivery governance, program execution, and quality assurance across client engagements — ensuring engineering rigor, on-time releases, and tight collaboration between business and technology teams.",
       "expertise": [
-        "Program Management",
-        "Agile Delivery",
-        "Delivery Governance",
+        "Program & Delivery Governance",
+        "Java & Spring Boot",
+        "Microservices Architecture",
+        "AWS (S3, Lambda, CloudWatch)",
+        "Docker · Kubernetes · Jenkins",
+        "MongoDB · Kafka · Redis",
+        "BFSI & Insurance Platforms",
         "Quality Assurance",
-        "Resource Planning",
-        "Client Success"
+        "Agile Delivery"
       ],
-      "linkedin": null
+      "linkedin": "https://www.linkedin.com/in/yogesh-upadhyay-57a857b3"
     }
   ]
 }
