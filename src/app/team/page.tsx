@@ -1,14 +1,28 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { CTASection } from "@/components/site/CTASection";
+import { LeadershipCard, type Leader } from "@/components/site/LeadershipCard";
 import team from "@/content/team.json";
 import { site } from "@/lib/site";
-import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
+import {
+  breadcrumbJsonLd,
+  jsonLdScript,
+  leadershipJsonLd,
+} from "@/lib/jsonld";
+
+const leaders = team.leadership as readonly Leader[];
 
 export const metadata: Metadata = {
-  title: "Team",
-  description: `Leadership at ${site.brand}.`,
+  title: "Leadership Team",
+  description:
+    "Meet the leadership of VSJ AI Labs — business strategy, enterprise architecture, and large-scale delivery across BFSI, Healthcare, and Enterprise SaaS.",
   alternates: { canonical: `${site.url}/team` },
+  openGraph: {
+    title: `Leadership Team | ${site.brand}`,
+    description:
+      "Founder, CTO, and Head of Delivery driving VSJ AI Labs' compliance-first engineering practice.",
+    url: `${site.url}/team`,
+  },
 };
 
 export default function TeamPage() {
@@ -22,6 +36,10 @@ export default function TeamPage() {
             { name: "Team", href: "/team" },
           ])
         )}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={jsonLdScript(leadershipJsonLd(leaders))}
       />
       <section className="relative overflow-hidden border-b border-(--border)">
         <div className="absolute inset-0 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]" />
@@ -43,52 +61,9 @@ export default function TeamPage() {
 
       <section className="py-20">
         <Container>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {team.leadership.map((p) => (
-              <article
-                key={p.slug}
-                className="rounded-xl border border-(--border) bg-(--surface-1) p-6"
-              >
-                <div className="aspect-square rounded-lg bg-gradient-to-br from-(--brand-violet)/10 via-(--surface-2) to-(--brand-cyan)/10 grid place-items-center text-(--muted) text-xs uppercase tracking-wider">
-                  Photo
-                </div>
-                <div className="mt-5">
-                  <div className="text-base font-semibold tracking-tight">
-                    {p.name}
-                  </div>
-                  <div className="text-xs text-(--brand-teal-text) font-medium uppercase tracking-wider mt-0.5">
-                    {p.role}
-                  </div>
-                  <p className="mt-3 text-sm text-(--muted) leading-relaxed">
-                    {p.bio}
-                  </p>
-                  {p.linkedin && (
-                    <a
-                      href={p.linkedin}
-                      target="_blank"
-                      rel="noopener"
-                      aria-label={`${p.name} on LinkedIn`}
-                      className="mt-4 inline-flex items-center gap-1.5 text-xs text-(--muted) hover:text-(--brand-violet)"
-                    >
-                      <svg
-                        width="12"
-                        height="12"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        aria-hidden
-                      >
-                        <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43c-1.14 0-2.06-.92-2.06-2.06 0-1.14.92-2.06 2.06-2.06s2.06.92 2.06 2.06-.92 2.06-2.06 2.06zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z" />
-                      </svg>
-                      LinkedIn
-                    </a>
-                  )}
-                  {p.placeholder && (
-                    <div className="mt-3 text-[10px] uppercase tracking-wider text-(--brand-orange) font-semibold">
-                      Placeholder · replace before launch
-                    </div>
-                  )}
-                </div>
-              </article>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {leaders.map((person) => (
+              <LeadershipCard key={person.slug} person={person} />
             ))}
           </div>
         </Container>

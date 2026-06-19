@@ -21,10 +21,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.brand} — ${site.tagline}`,
+    default: `${site.brand} | AI, Cloud & Enterprise Software Solutions`,
     template: `%s | ${site.brand}`,
   },
-  description: site.description,
+  description:
+    "VSJ AI Labs delivers compliance-first AI solutions, enterprise software development, cloud modernization, cybersecurity, and digital transformation services for BFSI, Healthcare, and SaaS organizations.",
   applicationName: site.brand,
   authors: [{ name: site.legalName, url: site.url }],
   keywords: [
@@ -51,8 +52,9 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     siteName: site.brand,
-    title: `${site.brand} — ${site.tagline}`,
-    description: site.description,
+    title: `${site.brand} | AI, Cloud & Enterprise Software Solutions`,
+    description:
+      "Compliance-first AI, enterprise software, cloud modernization, and cybersecurity for BFSI, Healthcare, and SaaS organizations.",
     url: site.url,
     locale: "en_IN",
     images: [
@@ -60,14 +62,17 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: `${site.brand} — ${site.tagline}`,
+        alt: `${site.brand} — AI, Cloud & Enterprise Software Solutions`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${site.brand} — ${site.tagline}`,
-    description: site.description,
+    site: "@vsjailabs",
+    creator: "@vsjailabs",
+    title: `${site.brand} | AI, Cloud & Enterprise Software Solutions`,
+    description:
+      "Compliance-first AI, enterprise software, cloud modernization, and cybersecurity for BFSI, Healthcare, and SaaS organizations.",
     images: ["/opengraph-image"],
   },
   icons: {

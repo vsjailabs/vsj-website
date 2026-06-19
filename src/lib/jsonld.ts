@@ -86,6 +86,43 @@ export function serviceJsonLd(service: {
   };
 }
 
+type Leader = {
+  slug: string;
+  name: string;
+  role: string;
+  bio: string;
+  expertise: readonly string[];
+  linkedin: string | null;
+};
+
+/**
+ * Person + ItemList schema for the leadership team page. Each leader
+ * is emitted as a Person node with jobTitle, description, knowsAbout,
+ * and worksFor pointing back to the Organization node.
+ */
+export function leadershipJsonLd(leaders: readonly Leader[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${site.url}/team#leadership`,
+    name: `${site.brand} Leadership Team`,
+    itemListElement: leaders.map((leader, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      item: {
+        "@type": "Person",
+        "@id": `${site.url}/team#${leader.slug}`,
+        name: leader.name,
+        jobTitle: leader.role,
+        description: leader.bio,
+        knowsAbout: leader.expertise,
+        worksFor: { "@id": `${site.url}#organization` },
+        ...(leader.linkedin ? { sameAs: [leader.linkedin] } : {}),
+      },
+    })),
+  };
+}
+
 /**
  * Inline a JSON-LD object as a <script type="application/ld+json"> tag.
  * Used inside Server Components to ship structured data with the HTML.

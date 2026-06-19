@@ -3,14 +3,21 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CTASection } from "@/components/site/CTASection";
 import { Stats } from "@/components/site/Stats";
+import { LeadershipSection } from "@/components/site/LeadershipSection";
 import { site } from "@/lib/site";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About VSJ AI Labs",
   description:
-    "VSJ AI Labs is an India-headquartered technology services company building software, AI, and cloud systems for global enterprises.",
+    "VSJ AI Labs is an India-headquartered technology services company building compliance-first AI, custom software, and cloud platforms for BFSI, Healthcare, and Enterprise SaaS leaders.",
   alternates: { canonical: `${site.url}/about` },
+  openGraph: {
+    title: `About | ${site.brand}`,
+    description:
+      "Compliance-first AI, custom software, and cloud platforms — built with engineering rigor for regulated industries.",
+    url: `${site.url}/about`,
+  },
 };
 
 const values = [
@@ -66,6 +73,8 @@ export default function AboutPage() {
       </section>
 
       <Stats />
+
+      <LeadershipSection />
 
       <section className="py-24 sm:py-28">
         <Container>

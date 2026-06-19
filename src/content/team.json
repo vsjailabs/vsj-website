@@ -1,28 +1,54 @@
 {
   "leadership": [
     {
-      "slug": "founder",
-      "name": "[Founder Name]",
+      "slug": "poonam-kumari",
+      "name": "Poonam Kumari",
       "role": "Founder & CEO",
-      "bio": "[2–3 sentence bio: prior roles, what they're great at, why they started VSJ]",
-      "linkedin": "https://www.linkedin.com/in/...",
-      "placeholder": true
+      "initials": "PK",
+      "bio": "Poonam leads VSJ AI Labs with a vision to build compliance-first AI and enterprise technology that helps organizations modernize operations, improve efficiency, and accelerate digital transformation. She owns business strategy, client success, partnerships, and organizational growth — ensuring every solution aligns with industry standards and customer outcomes.",
+      "expertise": [
+        "Business Strategy",
+        "Enterprise Growth",
+        "Client Success",
+        "Partnerships",
+        "Digital Transformation"
+      ],
+      "linkedin": null
     },
     {
-      "slug": "cto",
-      "name": "[CTO Name]",
+      "slug": "ashish-kumar-satyam",
+      "name": "Ashish Kumar Satyam",
       "role": "Chief Technology Officer",
-      "bio": "[Engineering background, domains, what they own at VSJ]",
-      "linkedin": "https://www.linkedin.com/in/...",
-      "placeholder": true
+      "initials": "AS",
+      "bio": "Ashish is a Solution Architect and full-stack engineering leader with 9+ years delivering enterprise-scale platforms across BFSI, Insurance, FinTech, Healthcare, and SaaS. He specializes in secure, cloud-native systems on React, Next.js, React Native, Java Spring Boot, AWS, and microservices. At VSJ AI Labs he owns technology strategy, engineering excellence, cloud modernization, and AI-driven product innovation.",
+      "expertise": [
+        "Enterprise Architecture",
+        "Cloud-Native Platforms (AWS)",
+        "AI & Intelligent Automation",
+        "React / Next.js / React Native",
+        "Java Spring Boot",
+        "Microservices",
+        "DevOps & CI/CD",
+        "Security & Compliance",
+        "BFSI & FinTech"
+      ],
+      "linkedin": null
     },
     {
-      "slug": "head-of-delivery",
-      "name": "[Head of Delivery]",
+      "slug": "yogesh-uppadhaya",
+      "name": "Yogesh Uppadhaya",
       "role": "Head of Delivery",
-      "bio": "[Delivery experience, industries, what they own at VSJ]",
-      "linkedin": "https://www.linkedin.com/in/...",
-      "placeholder": true
+      "initials": "YU",
+      "bio": "Yogesh oversees project execution, delivery governance, and customer engagement across every client program. He ensures on-time delivery, operational excellence, risk management, and tight collaboration between business and technology teams — so engagements stay predictable from kickoff to handover.",
+      "expertise": [
+        "Program Management",
+        "Agile Delivery",
+        "Delivery Governance",
+        "Quality Assurance",
+        "Resource Planning",
+        "Client Success"
+      ],
+      "linkedin": null
     }
   ]
 }
