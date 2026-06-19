@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 function LinkedInGlyph() {
   return (
     <svg
@@ -20,6 +22,8 @@ export type Leader = {
   bio: string;
   expertise: readonly string[];
   linkedin: string | null;
+  /** Optional path under /public to a square headshot (e.g. "/team/poonam-kumari.jpg"). */
+  avatar?: string | null;
 };
 
 export function LeadershipCard({ person }: { person: Leader }) {
@@ -30,12 +34,23 @@ export function LeadershipCard({ person }: { person: Leader }) {
       itemType="https://schema.org/Person"
     >
       <div className="flex items-center gap-4">
-        <div
-          aria-hidden="true"
-          className="grid place-items-center h-16 w-16 rounded-full text-white text-lg font-semibold tracking-wide bg-[linear-gradient(135deg,var(--brand-violet),var(--brand-blue)_55%,var(--brand-cyan))] shadow-md shadow-(--brand-violet)/20"
-        >
-          {person.initials}
-        </div>
+        {person.avatar ? (
+          <Image
+            src={person.avatar}
+            alt={`${person.name}, ${person.role}`}
+            width={64}
+            height={64}
+            className="h-16 w-16 rounded-full object-cover shadow-md shadow-(--brand-violet)/20 ring-2 ring-(--surface-1)"
+            itemProp="image"
+          />
+        ) : (
+          <div
+            aria-hidden="true"
+            className="grid place-items-center h-16 w-16 rounded-full text-white text-lg font-semibold tracking-wide bg-[linear-gradient(135deg,var(--brand-violet),var(--brand-blue)_55%,var(--brand-cyan))] shadow-md shadow-(--brand-violet)/20"
+          >
+            {person.initials}
+          </div>
+        )}
         <div className="min-w-0">
           <h3
             className="text-base sm:text-lg font-semibold tracking-tight text-(--foreground) truncate"
