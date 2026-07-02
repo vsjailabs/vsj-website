@@ -1,0 +1,18 @@
+services:
+  web:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_SITE_URL: ${NEXT_PUBLIC_SITE_URL:-https://vsjailabs.com}
+    image: vsj-website:latest
+    container_name: vsj-website
+    restart: unless-stopped
+    env_file:
+      - .env.production
+    environment:
+      NODE_ENV: production
+      NEXT_TELEMETRY_DISABLED: "1"
+      HOSTNAME: 0.0.0.0
+      PORT: "3017"
+    ports:
+      - "127.0.0.1:3017:3017"

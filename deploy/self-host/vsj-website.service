@@ -1,0 +1,31 @@
+[Unit]
+Description=VSJ AI Labs Next.js website
+Documentation=https://vsjailabs.com
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=vsj
+Group=www-data
+WorkingDirectory=/opt/vsj-website/current
+EnvironmentFile=/opt/vsj-website/shared/.env.production
+Environment=PORT=3017
+Environment=HOSTNAME=127.0.0.1
+ExecStart=/usr/bin/npm run start -- -H 127.0.0.1 -p 3017
+Restart=always
+RestartSec=5
+KillSignal=SIGTERM
+TimeoutStopSec=30
+
+# Hardening. Keep these conservative because Next.js needs filesystem access
+# to its build/cache directories inside the release path.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+ReadWritePaths=/opt/vsj-website
+
+[Install]
+WantedBy=multi-user.target
+
