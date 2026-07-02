@@ -10,12 +10,11 @@ export const runtime = "nodejs";
  * provider by setting up environment variables and replacing the TODO
  * block below.
  *
- * Recommended providers (one of):
- *   - RESEND (cleanest API, generous free tier, transactional email)
- *     env: RESEND_API_KEY, RESEND_FROM=contact@vsjailabs.com
- *   - POSTMARK
- *     env: POSTMARK_API_KEY, POSTMARK_FROM=...
- *   - AWS SES (if you already use AWS)
+ * Providers wired (both optional, run in parallel via Promise.allSettled):
+ *   - RESEND (transactional email): RESEND_API_KEY, RESEND_FROM
+ *   - ERPNEXT (CRM Lead creation on erp.vsjailabs.in):
+ *     ERPNEXT_URL, ERPNEXT_API_KEY, ERPNEXT_API_SECRET
+ *   Neither configured → structured console log so ops can still recover.
  *
  * Anti-spam:
  *   - Honeypot field "website" must be empty
@@ -77,13 +76,16 @@ export async function POST(req: Request) {
     return NextResponse.json({ errors }, { status: 422 });
   }
 
-  // ─────────────── Email delivery via Resend ───────────────
+  // ─────────────── Parallel delivery: Resend email + ERPNext CRM Lead ─────────
+  // Both fire via Promise.allSettled so one failure never blocks the other.
+  // The user always gets a 200 back — degradation is silent, errors go to logs.
+  const tasks: Promise<unknown>[] = [];
+
   const resendKey = process.env.RESEND_API_KEY;
   const resendFrom = process.env.RESEND_FROM;
-
   if (resendKey && resendFrom) {
-    try {
-      const res = await fetch("https://api.resend.com/emails", {
+    tasks.push(
+      fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${resendKey}`,
@@ -102,24 +104,60 @@ export async function POST(req: Request) {
             message,
           ].join("\n"),
         }),
-      });
+      }).then(async (res) => {
+        if (!res.ok) console.error("[contact] Resend error:", res.status, await res.text());
+      })
+    );
+  }
 
-      if (!res.ok) {
-        console.error("[contact] Resend error:", res.status, await res.text());
-      }
-    } catch (err) {
-      console.error("[contact] Resend send failed:", err);
-    }
-  } else {
-    // Fallback: log to console when Resend is not configured
-    console.log("[contact form — email not configured]", {
+  // ERPNext CRM Lead — co-hosted on erp.vsjailabs.in (Hostinger). Creates a
+  // Lead in the CRM so every submission lands with source attribution instead
+  // of a dead email.
+  const erpUrl = process.env.ERPNEXT_URL;         // e.g. https://erp.vsjailabs.in
+  const erpKey = process.env.ERPNEXT_API_KEY;
+  const erpSecret = process.env.ERPNEXT_API_SECRET;
+  if (erpUrl && erpKey && erpSecret) {
+    tasks.push(
+      fetch(`${erpUrl.replace(/\/$/, "")}/api/resource/Lead`, {
+        method: "POST",
+        headers: {
+          Authorization: `token ${erpKey}:${erpSecret}`,
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          lead_name: name,
+          email_id: email,
+          mobile_no: phone || undefined,
+          company_name: company || undefined,
+          source: "Website",
+          notes: [
+            {
+              note: [
+                `Subject: ${subject}`,
+                "",
+                message,
+              ].join("\n"),
+            },
+          ],
+        }),
+      }).then(async (res) => {
+        if (!res.ok) console.error("[contact] ERPNext error:", res.status, await res.text());
+      })
+    );
+  }
+
+  if (tasks.length === 0) {
+    // Neither provider configured — log so ops can still see the submission
+    console.log("[contact form — no provider configured]", {
       to: site.email,
       from: { name, email, company, phone },
       subject,
       message: message.slice(0, 200) + (message.length > 200 ? "…" : ""),
     });
+  } else {
+    await Promise.allSettled(tasks);
   }
-  // ──────────────────────────────────────────────────────────────────
 
   return NextResponse.json({ ok: true }, { status: 200 });
 }

@@ -8,6 +8,20 @@ import type { NextConfig } from "next";
  * header key from `Content-Security-Policy-Report-Only` to
  * `Content-Security-Policy` below.
  */
+// Optional analytics origin — allowlisted in script-src + connect-src when
+// NEXT_PUBLIC_PLAUSIBLE_SRC is set to an external URL. When unset (or set to
+// a same-origin self-hosted URL), CSP stays maximally strict.
+const analyticsOrigin = (() => {
+  const src = process.env.NEXT_PUBLIC_PLAUSIBLE_SRC;
+  if (!src) return "";
+  try {
+    const u = new URL(src);
+    return u.origin;
+  } catch {
+    return "";
+  }
+})();
+
 const cspDirectives = [
   "default-src 'self'",
   "base-uri 'self'",
@@ -16,10 +30,10 @@ const cspDirectives = [
   // Next.js + Tailwind v4 require unsafe-inline for styles
   "style-src 'self' 'unsafe-inline'",
   // Next.js dev/Turbopack uses inline scripts; tighten in production with nonces if needed
-  "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+  `script-src 'self' 'unsafe-inline' 'unsafe-eval'${analyticsOrigin ? " " + analyticsOrigin : ""}`,
   "img-src 'self' data: blob:",
   "font-src 'self' data:",
-  "connect-src 'self'",
+  `connect-src 'self'${analyticsOrigin ? " " + analyticsOrigin : ""}`,
   "object-src 'none'",
   "upgrade-insecure-requests",
 ].join("; ");

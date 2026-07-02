@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { CookieBanner } from "@/components/site/CookieBanner";
+import { Analytics } from "@/components/site/Analytics";
 import { SkipLink } from "@/components/site/SkipLink";
 import { site } from "@/lib/site";
 import { jsonLdScript, organizationJsonLd, websiteJsonLd } from "@/lib/jsonld";
@@ -96,6 +97,18 @@ export const metadata: Metadata = {
       "max-video-preview": -1,
     },
   },
+  verification: {
+    // Env-var gated so a missing verification token is a no-op instead of
+    // rendering `<meta content="undefined">`. Set on the deploy target:
+    //   NEXT_PUBLIC_GSC_VERIFICATION  — Google Search Console
+    //   NEXT_PUBLIC_BING_VERIFICATION — Bing Webmaster Tools
+    ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
+      ? { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION }
+      : {}),
+    ...(process.env.NEXT_PUBLIC_BING_VERIFICATION
+      ? { other: { "msvalidate.01": process.env.NEXT_PUBLIC_BING_VERIFICATION } }
+      : {}),
+  },
 };
 
 export const viewport: Viewport = {
@@ -136,6 +149,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <CookieBanner />
+        <Analytics />
       </body>
     </html>
   );
