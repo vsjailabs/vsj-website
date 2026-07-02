@@ -1,3 +1,5 @@
+name: vsj-website
+
 services:
   web:
     build:

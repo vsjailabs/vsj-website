@@ -9,6 +9,7 @@ const companyLinks = [
   { label: "About", href: "/about" },
   { label: "Team", href: "/team" },
   { label: "Case Studies", href: "/case-studies" },
+  { label: "Security", href: "/security" },
   { label: "Contact", href: "/contact" },
 ];
 

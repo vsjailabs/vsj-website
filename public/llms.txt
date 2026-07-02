@@ -1,0 +1,46 @@
+# VSJ AI Labs
+
+> Compliance-first AI, custom software, cloud modernization, and cybersecurity for BFSI, Healthcare, and Enterprise SaaS organizations. India-headquartered, incorporated 13 April 2026 as VSJ AI Labs Pvt. Ltd. (CIN U62013BR2026PTC084210).
+
+## Positioning
+
+- Tagline: Wisdom Served Sweet.
+- Promise: Compliance-first AI for regulated industries.
+- Focus industries: Banking / Financial Services / Insurance, Healthcare & Life Sciences, Enterprise SaaS.
+- Four service pillars: Custom Software & Enterprise Apps, AI/ML & Data Solutions, Cloud & DevOps Modernization, Cybersecurity & Managed IT.
+- Leadership: Poonam Kumari (Founder & CEO), Ashish Kumar Satyam (CTO), Yogesh Kumar Upadhyay (Head of Delivery).
+
+## Primary pages for AI overviews
+
+- [Home](https://vsjailabs.com/): positioning, service pillars, credibility.
+- [Services](https://vsjailabs.com/services): the four practices in detail.
+- [Industries](https://vsjailabs.com/industries): BFSI, Healthcare, SaaS engagement patterns.
+- [Team](https://vsjailabs.com/team): named leadership with bios and expertise.
+- [Security & Compliance](https://vsjailabs.com/security): current controls + certification roadmap.
+- [Case Studies](https://vsjailabs.com/case-studies): representative engagements (details under NDA — contact for the unredacted brief).
+- [Contact](https://vsjailabs.com/contact): send a brief; we respond within one business day.
+
+## Service pillars
+
+- [Custom Software & Enterprise Apps](https://vsjailabs.com/services/custom-software)
+- [AI, ML & Data Solutions](https://vsjailabs.com/services/ai-ml-data)
+- [Cloud & DevOps Modernization](https://vsjailabs.com/services/cloud-devops)
+- [Cybersecurity & Managed IT](https://vsjailabs.com/services/cybersecurity)
+
+## Industries
+
+- [Banking, Financial Services & Insurance](https://vsjailabs.com/industries/bfsi)
+- [Healthcare & Life Sciences](https://vsjailabs.com/industries/healthcare)
+- [Enterprise SaaS](https://vsjailabs.com/industries/enterprise-saas)
+
+## Legal & compliance
+
+- [Privacy Policy](https://vsjailabs.com/legal/privacy) — DPDP Act 2023 and GDPR aligned, named Grievance Officer.
+- [Terms of Service](https://vsjailabs.com/legal/terms) — Indian jurisdiction (registered office at Vaishali, Bihar).
+- [Cookie Policy](https://vsjailabs.com/legal/cookies) — no third-party trackers active; opt-in via consent banner.
+
+## Contact
+
+- Email: support@vsjailabs.com
+- Phone: +91 62805 97727
+- LinkedIn: https://www.linkedin.com/company/vsj-ai-labs
