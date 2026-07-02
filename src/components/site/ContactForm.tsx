@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/Button";
 
-type FieldErrors = Partial<Record<"name" | "email" | "subject" | "message" | "company" | "phone", string>>;
+type FieldErrors = Partial<Record<"name" | "email" | "message" | "company", string>>;
 
 export function ContactForm() {
   const [pending, setPending] = useState(false);
@@ -27,8 +27,6 @@ export function ContactForm() {
       name: String(fd.get("name") ?? ""),
       email: String(fd.get("email") ?? ""),
       company: String(fd.get("company") ?? ""),
-      phone: String(fd.get("phone") ?? ""),
-      subject: String(fd.get("subject") ?? ""),
       message: String(fd.get("message") ?? ""),
       website: String(fd.get("website") ?? ""),
       _t: String(renderedAt.current),
@@ -95,11 +93,12 @@ export function ContactForm() {
         <Field label="Name" name="name" required error={errors.name} />
         <Field label="Email" name="email" type="email" required error={errors.email} />
       </div>
-      <div className="grid sm:grid-cols-2 gap-5">
-        <Field label="Company" name="company" error={errors.company} />
-        <Field label="Phone (optional)" name="phone" error={errors.phone} />
-      </div>
-      <Field label="Subject" name="subject" required error={errors.subject} />
+      <Field
+        label="Company (optional)"
+        name="company"
+        autoComplete="organization"
+        error={errors.company}
+      />
 
       <div>
         <label className="text-sm font-medium" htmlFor="message">
@@ -145,12 +144,14 @@ function Field({
   type = "text",
   required,
   error,
+  autoComplete,
 }: {
   label: string;
   name: string;
   type?: string;
   required?: boolean;
   error?: string;
+  autoComplete?: string;
 }) {
   const errorId = error ? `${name}-error` : undefined;
   return (
@@ -164,6 +165,7 @@ function Field({
         name={name}
         type={type}
         required={required}
+        autoComplete={autoComplete}
         aria-invalid={error ? true : undefined}
         aria-describedby={errorId}
         className="mt-2 block w-full rounded-lg border border-(--border) bg-(--background) px-3.5 py-2.5 text-sm outline-none focus:border-(--brand-violet) focus:ring-2 focus:ring-(--brand-violet)/20"

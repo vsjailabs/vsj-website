@@ -26,8 +26,6 @@ type Body = {
   name?: string;
   email?: string;
   company?: string;
-  phone?: string;
-  subject?: string;
   message?: string;
   website?: string; // honeypot — must be empty
   _t?: string; // form-render epoch ms — guards against instant submits
@@ -60,17 +58,13 @@ export async function POST(req: Request) {
   const errors: Record<string, string> = {};
   const name = (body.name ?? "").trim();
   const email = (body.email ?? "").trim();
-  const subject = (body.subject ?? "").trim();
   const message = (body.message ?? "").trim();
   const company = (body.company ?? "").trim();
-  const phone = (body.phone ?? "").trim();
 
   if (name.length < 2 || name.length > 120) errors.name = "Name is required.";
   if (!isEmail(email) || email.length > 200) errors.email = "Enter a valid email.";
-  if (subject.length < 2 || subject.length > 200) errors.subject = "Subject is required.";
   if (message.length < 10 || message.length > 5000) errors.message = "Message must be at least 10 characters.";
   if (company.length > 200) errors.company = "Company name too long.";
-  if (phone.length > 40) errors.phone = "Phone too long.";
 
   if (Object.keys(errors).length) {
     return NextResponse.json({ errors }, { status: 422 });
@@ -95,11 +89,10 @@ export async function POST(req: Request) {
           from: resendFrom,
           to: site.email,
           reply_to: email,
-          subject: `[Site] ${subject}`,
+          subject: `[Site inquiry] ${company || name}`,
           text: [
             `From: ${name} <${email}>`,
             `Company: ${company || "—"}`,
-            `Phone: ${phone || "—"}`,
             "",
             message,
           ].join("\n"),
@@ -128,18 +121,9 @@ export async function POST(req: Request) {
         body: JSON.stringify({
           lead_name: name,
           email_id: email,
-          mobile_no: phone || undefined,
           company_name: company || undefined,
           source: "Website",
-          notes: [
-            {
-              note: [
-                `Subject: ${subject}`,
-                "",
-                message,
-              ].join("\n"),
-            },
-          ],
+          notes: [{ note: message }],
         }),
       }).then(async (res) => {
         if (!res.ok) console.error("[contact] ERPNext error:", res.status, await res.text());
@@ -151,8 +135,7 @@ export async function POST(req: Request) {
     // Neither provider configured — log so ops can still see the submission
     console.log("[contact form — no provider configured]", {
       to: site.email,
-      from: { name, email, company, phone },
-      subject,
+      from: { name, email, company },
       message: message.slice(0, 200) + (message.length > 200 ? "…" : ""),
     });
   } else {
