@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "mcp__Claude_in_Chrome__tabs_context_mcp",
+      "Bash(mkdir -p /Users/tpe/VSJWORK/vsj-website/.claude)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(xargs kill -9)",
+      "Bash(find ~/OwnCompany -name \"*.png\" -type f 2>/dev/null | head -20)",
+      "Bash(find ~/Downloads -maxdepth 2 -name \"*logo*\" -o -name \"*VSJ*\" -o -name \"*vsj*\" 2>/dev/null | grep -i \"png\\\\|svg\" | head -20)",
+      "Bash(cp /Users/tpe/Downloads/vsj-logo.png /Users/tpe/VSJWORK/vsj-website/public/brand/logo-horizontal.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/tpe/VSJWORK/vsj-website/public/brand/logo-horizontal.png)"
+    ]
+  }
+}
