@@ -65,10 +65,30 @@ export default function PrivacyPage() {
 
       <h2>5. Sharing</h2>
       <p>
-        We do not sell personal data. We share data only with:{" "}
-        <span className="placeholder">[LIST PROCESSORS — e.g. Google Workspace, Microsoft 365, Resend, Vercel, AWS]</span>{" "}
-        — each bound by data-processing agreements and the same level of
-        protection we provide.
+        We do not sell personal data. We share personal data only with the
+        following categories of processors, each bound by contractual or
+        regulatory obligations to provide the same level of protection we do:
+      </p>
+      <ul>
+        <li>
+          <strong>Hostinger</strong> — infrastructure and application hosting
+          in the India region (this website, our internal ERPNext CRM at{" "}
+          <code>erp.vsjailabs.in</code>, and OpenProject at{" "}
+          <code>pm.vsjailabs.in</code>).
+        </li>
+        <li>
+          <strong>Resend</strong> — transactional email delivery for
+          enquiry-form notifications.
+        </li>
+        <li>
+          <strong>Let&apos;s Encrypt (ISRG)</strong> — TLS certificate
+          issuance for HTTPS. No personal data is transferred.
+        </li>
+      </ul>
+      <p>
+        We will update this list before enabling any additional processor
+        (for example, an analytics provider). Consent controls in the cookie
+        banner govern activation of any processor listed as opt-in.
       </p>
 
       <h2>6. International transfers</h2>
@@ -81,9 +101,22 @@ export default function PrivacyPage() {
       <h2>7. Retention</h2>
       <p>
         We retain personal data only as long as needed for the purposes stated,
-        or to meet legal/contractual requirements.{" "}
-        <span className="placeholder">[CONFIRM RETENTION PERIODS PER CATEGORY — e.g. enquiry forms 24 months]</span>.
+        or to meet legal and contractual requirements. Specifically:
       </p>
+      <ul>
+        <li>
+          <strong>Enquiry-form submissions</strong> — up to 24 months from
+          your last interaction, then deleted or anonymised.
+        </li>
+        <li>
+          <strong>Cookie-consent records</strong> — 12 months, or until you
+          clear them from your browser.
+        </li>
+        <li>
+          <strong>Statutory records</strong> (invoicing, tax, contractual
+          correspondence) — 7 years, as required by Indian law.
+        </li>
+      </ul>
 
       <h2>8. Your rights</h2>
       <p>You have the right to:</p>
@@ -123,8 +156,7 @@ export default function PrivacyPage() {
 
       <h2>12. Contact</h2>
       <p>
-        Grievance Officer:{" "}
-        <span className="placeholder">[NAME, DESIGNATION]</span>
+        Grievance Officer: <strong>Poonam Kumari, Founder &amp; CEO</strong>
         <br />
         Email: <a href={`mailto:${site.email}`}>{site.email}</a>
         <br />

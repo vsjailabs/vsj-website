@@ -74,8 +74,12 @@ export default function TermsPage() {
         To the fullest extent permitted by law, the Company shall not be
         liable for any indirect, incidental, special, consequential, or
         punitive damages arising from your use of the Site. Our total
-        aggregate liability under these Terms is limited to{" "}
-        <span className="placeholder">[INR 1,000 / USD 100 — confirm with counsel]</span>.
+        aggregate liability under these Terms is limited to the greater of
+        (a) the fees, if any, you paid to us in the twelve (12) months
+        immediately preceding the claim, or (b) INR 1,000. These Terms
+        govern only your use of this Site — engagement-specific liability is
+        governed by the executed Master Services Agreement or Statement of
+        Work, which supersedes this clause for that engagement.
       </p>
 
       <h2>8. Indemnification</h2>
@@ -87,8 +91,9 @@ export default function TermsPage() {
       <h2>9. Governing law and jurisdiction</h2>
       <p>
         These Terms are governed by the laws of India. Disputes are subject to
-        the exclusive jurisdiction of the courts at{" "}
-        <span className="placeholder">[CITY OF JURISDICTION — e.g. Patna, Bihar]</span>.
+        the exclusive jurisdiction of the competent courts at{" "}
+        <strong>Vaishali, Bihar</strong>, being the registered office of
+        VSJ AI Labs Pvt. Ltd. (CIN {site.cin}).
       </p>
 
       <h2>10. Changes</h2>

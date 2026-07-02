@@ -64,8 +64,12 @@ export default function CookiesPage() {
 
       <h2>3. Third-party cookies</h2>
       <p>
-        When enabled by your consent, we may use the following providers:{" "}
-        <span className="placeholder">[LIST e.g. Plausible, Google Analytics, LinkedIn Insight Tag]</span>.
+        <strong>We do not currently run any third-party trackers, advertising
+        cookies, or session-replay tools on this site.</strong> When we add
+        analytics in the future, the provider will be named here and its
+        script will only load after you opt in via the consent banner. We
+        will not enable any third-party tracker without first updating this
+        page.
       </p>
 
       <h2>4. Managing your preferences</h2>
