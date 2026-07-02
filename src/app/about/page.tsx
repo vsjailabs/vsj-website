@@ -10,7 +10,7 @@ import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 export const metadata: Metadata = {
   title: "About Us",
   description:
-    "VSJ AI Labs is an India-headquartered technology services company building compliance-first AI, custom software, and cloud platforms for BFSI, Healthcare, and Enterprise SaaS leaders.",
+    "India-based services firm building compliance-first AI, custom software, and cloud platforms for BFSI, Healthcare, and Enterprise SaaS leaders.",
   alternates: { canonical: `${site.url}/about` },
   openGraph: {
     title: `About | ${site.brand}`,

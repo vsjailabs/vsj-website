@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: `%s | ${site.brand}`,
   },
   description:
-    "VSJ AI Labs delivers compliance-first AI solutions, enterprise software development, cloud modernization, cybersecurity, and digital transformation services for BFSI, Healthcare, and SaaS organizations.",
+    "Compliance-first AI, enterprise software, cloud modernization, and cybersecurity for BFSI, Healthcare, and Enterprise SaaS. India-headquartered.",
   applicationName: site.brand,
   authors: [{ name: site.legalName, url: site.url }],
   keywords: [
