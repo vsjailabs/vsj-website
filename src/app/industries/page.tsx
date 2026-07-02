@@ -6,10 +6,16 @@ import { site } from "@/lib/site";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "Industries",
+  title: "Industries We Serve",
   description:
-    "Industries served by VSJ AI Labs — BFSI, healthcare, retail, manufacturing, public sector, and SaaS.",
+    "Compliance-first AI and enterprise software for BFSI, Healthcare, and Enterprise SaaS — regulatory floors, integration hairballs, and customer expectations we already know.",
   alternates: { canonical: `${site.url}/industries` },
+  openGraph: {
+    title: `Industries We Serve | ${site.brand}`,
+    description:
+      "BFSI · Healthcare · Enterprise SaaS — engagements shaped around the regulations and integrations of each industry.",
+    url: `${site.url}/industries`,
+  },
 };
 
 export default function IndustriesPage() {

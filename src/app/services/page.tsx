@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ServicePillars } from "@/components/site/ServicePillars";
 import { EmergingTech } from "@/components/site/EmergingTech";
 import { CTASection } from "@/components/site/CTASection";
@@ -9,10 +8,16 @@ import { site } from "@/lib/site";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "AI, Cloud & Enterprise Software Services",
   description:
-    "Custom software, AI/ML, cloud & DevOps, and cybersecurity services from VSJ AI Labs.",
+    "Four VSJ AI Labs practices — custom software, AI/ML/data, cloud & DevOps modernization, and cybersecurity — engineered for BFSI, Healthcare, and Enterprise SaaS.",
   alternates: { canonical: `${site.url}/services` },
+  openGraph: {
+    title: `AI, Cloud & Enterprise Software Services | ${site.brand}`,
+    description:
+      "Four tightly-integrated practices — custom software, AI/ML/data, cloud modernization, and cybersecurity — engineered for regulated industries.",
+    url: `${site.url}/services`,
+  },
 };
 
 export default function ServicesPage() {
@@ -30,11 +35,19 @@ export default function ServicesPage() {
       <section className="relative overflow-hidden border-b border-(--border)">
         <div className="absolute inset-0 bg-grid opacity-50 [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_75%)]" />
         <Container className="relative pt-20 pb-16">
-          <SectionHeading
-            eyebrow="Services"
-            title="What we deliver."
-            description="Four practices, deeply staffed and tightly integrated. Engage a single workstream or compose a full delivery team."
-          />
+          <div className="max-w-3xl">
+            <div className="text-xs font-semibold uppercase tracking-[0.18em] text-(--brand-teal-text) mb-3">
+              Services
+            </div>
+            <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight">
+              AI, cloud & enterprise software — engineered for regulated industries.
+            </h1>
+            <p className="mt-6 text-lg text-(--muted) leading-relaxed">
+              Four practices, deeply staffed and tightly integrated. Engage a single
+              workstream or compose a full delivery team — from custom enterprise
+              applications to AI/ML, cloud modernization, and cybersecurity.
+            </p>
+          </div>
         </Container>
       </section>
 
