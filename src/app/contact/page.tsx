@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "Contact Us",
+  title: "Contact — Start an AI Engagement",
   description:
     "Start a project with VSJ AI Labs — AI, cloud, custom software, and cybersecurity engagements for BFSI, Healthcare, and Enterprise SaaS. We respond within one business day.",
   alternates: { canonical: `${site.url}/contact` },

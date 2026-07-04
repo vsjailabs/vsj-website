@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/jsonld";
 
 export const metadata: Metadata = {
-  title: "About Us",
+  title: "About — Compliance-First AI Services",
   description:
     "India-based services firm building compliance-first AI, custom software, and cloud platforms for BFSI, Healthcare, and Enterprise SaaS leaders.",
   alternates: { canonical: `${site.url}/about` },

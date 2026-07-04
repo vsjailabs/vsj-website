@@ -19,7 +19,7 @@
       "icon": "Sparkles",
       "title": "AI, ML & Data Solutions",
       "tagline": "From production LLM workflows to forecasting models — applied AI that earns its keep.",
-      "summary": "We deploy AI, ML, and data analytics solutions that move metrics: customer churn models, document automation, conversational agents, decision intelligence dashboards, and beyond.",
+      "summary": "We deploy AI, ML, and data analytics that move metrics: churn models, document automation, conversational agents, and decision intelligence dashboards.",
       "capabilities": [
         "LLM-based agents & RAG systems",
         "Predictive ML models & forecasting",
@@ -47,7 +47,7 @@
       "icon": "ShieldCheck",
       "title": "Cybersecurity & Managed IT",
       "tagline": "VAPT, compliance, and 24x7 IT support — security treated as an engineering discipline.",
-      "summary": "We harden applications and infrastructure with VAPT, secure code reviews, compliance readiness, and managed support — covering the gap between auditors, engineers, and operations.",
+      "summary": "We harden apps and infrastructure with VAPT, secure code reviews, compliance readiness, and managed support — covering the gap between auditors, engineers, and ops.",
       "capabilities": [
         "Vulnerability assessment & penetration testing (VAPT)",
         "Secure code review & threat modeling",

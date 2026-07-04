@@ -13,7 +13,7 @@ import {
 const leaders = team.leadership as readonly Leader[];
 
 export const metadata: Metadata = {
-  title: "Leadership Team",
+  title: "Leadership — AI, Cloud & BFSI Engineers",
   description:
     "Meet the leadership of VSJ AI Labs — business strategy, enterprise architecture, and large-scale delivery across BFSI, Healthcare, and Enterprise SaaS.",
   alternates: { canonical: `${site.url}/team` },
