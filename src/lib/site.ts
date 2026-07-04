@@ -22,7 +22,7 @@ export const site = {
   },
   practices: ["BFSI", "Healthcare", "Enterprise SaaS"],
   socials: {
-    linkedin: "https://www.linkedin.com/company/vsj-ai-labs",
+    linkedin: "https://www.linkedin.com/company/vjs-ai-labs",
     github: "https://github.com/vsj-ai-labs",
     x: "https://x.com/vsjailabs",
   },
