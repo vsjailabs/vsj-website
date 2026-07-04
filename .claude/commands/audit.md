@@ -26,6 +26,7 @@ Steps (batch what you can):
    - X-Frame-Options `DENY`
    - Permissions-Policy configured
    - `x-nextjs-cache: HIT` (ISR working)
+   - **No duplicated headers.** Each security header should appear exactly once. Duplicates indicate that Nginx is adding `add_header` directives on top of Next.js's own — the Nginx values are usually weaker (shorter HSTS, fewer Permissions-Policy features) and browsers can pick either. If any header appears twice, flag it and see [[project_vsj_deploy]] "add_header trap" for the fix — remove them from `/etc/nginx/sites-available/vsjailabs.com` on the box, not from `next.config.ts`.
 
 4. Home page 5-run TTFB + total-time sample (median target ≤300ms TTFB, ≤700ms total).
 
