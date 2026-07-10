@@ -61,7 +61,13 @@ export default function TeamPage() {
 
       <section className="py-20">
         <Container>
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div
+            className={
+              leaders.length >= 3
+                ? "grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+                : "grid gap-6 sm:grid-cols-2 max-w-4xl mx-auto"
+            }
+          >
             {leaders.map((person) => (
               <LeadershipCard key={person.slug} person={person} />
             ))}
