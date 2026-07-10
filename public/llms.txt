@@ -8,7 +8,7 @@
 - Promise: Compliance-first AI for regulated industries.
 - Focus industries: Banking / Financial Services / Insurance, Healthcare & Life Sciences, Enterprise SaaS.
 - Four service pillars: Custom Software & Enterprise Apps, AI/ML & Data Solutions, Cloud & DevOps Modernization, Cybersecurity & Managed IT.
-- Leadership: Poonam Kumari (Founder & CEO), Ashish Kumar Satyam (CTO), Yogesh Kumar Upadhyay (Head of Delivery).
+- Leadership: Poonam Kumari (Founder & CEO), Yogesh Kumar Upadhyay (CTO & Head of Delivery).
 
 ## Primary pages for AI overviews
 

@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `Leadership Team | ${site.brand}`,
     description:
-      "Founder, CTO, and Head of Delivery driving VSJ AI Labs' compliance-first engineering practice.",
+      "The Founder & CEO and CTO driving VSJ AI Labs' compliance-first engineering practice.",
     url: `${site.url}/team`,
   },
 };

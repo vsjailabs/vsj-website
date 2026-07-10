@@ -21,38 +21,20 @@
       "avatar": "/team/poonam-kumari.jpg"
     },
     {
-      "slug": "ashish-kumar-satyam",
-      "name": "Ashish Kumar Satyam",
-      "role": "Chief Technology Officer",
-      "initials": "AS",
-      "bio": "Ashish is a Solution Architect and full-stack engineering leader with 9+ years delivering enterprise-scale platforms across BFSI, Insurance, FinTech, Healthcare, and SaaS. He specializes in secure, cloud-native systems on React, Next.js, React Native, Java Spring Boot, AWS, and microservices. At VSJ AI Labs he owns technology strategy, engineering excellence, cloud modernization, and AI-driven product innovation.",
-      "expertise": [
-        "Enterprise Architecture",
-        "Cloud-Native Platforms (AWS)",
-        "AI & Intelligent Automation",
-        "React / Next.js / React Native",
-        "Java Spring Boot",
-        "Microservices",
-        "DevOps & CI/CD",
-        "Security & Compliance",
-        "BFSI & FinTech"
-      ],
-      "linkedin": "https://in.linkedin.com/in/ashish-kumar-satyam-6b2b00113",
-      "avatar": "/team/ashish-kumar-satyam.jpg"
-    },
-    {
       "slug": "yogesh-kumar-upadhyay",
       "name": "Yogesh Kumar Upadhyay",
-      "role": "Head of Delivery",
+      "role": "CTO & Head of Delivery",
       "initials": "YU",
-      "bio": "Yogesh brings 11+ years of hands-on engineering across Banking and Insurance — including microservices for Max Life Insurance policy management at Infosys, partner-bank integrations with Axis and Yes Bank, and cloud-native platforms at Hexaware. At VSJ AI Labs he owns delivery governance, program execution, and quality assurance across client engagements — ensuring engineering rigor, on-time releases, and tight collaboration between business and technology teams.",
+      "bio": "Yogesh brings 11+ years of hands-on engineering across Banking and Insurance — including microservices for Max Life Insurance policy management at Infosys, partner-bank integrations with Axis and Yes Bank, and cloud-native platforms at Hexaware. At VSJ AI Labs he owns technology strategy, engineering excellence, and cloud modernization alongside delivery governance, program execution, and quality assurance across client engagements — ensuring engineering rigor, on-time releases, and tight collaboration between business and technology teams.",
       "expertise": [
-        "Program & Delivery Governance",
+        "Technology Strategy",
+        "Enterprise Architecture",
         "Java & Spring Boot",
         "Microservices Architecture",
         "AWS (S3, Lambda, CloudWatch)",
         "Docker · Kubernetes · Jenkins",
         "MongoDB · Kafka · Redis",
+        "Program & Delivery Governance",
         "BFSI & Insurance Platforms",
         "Quality Assurance",
         "Agile Delivery"
