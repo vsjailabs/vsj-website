@@ -3,7 +3,7 @@
     {
       "slug": "poonam-kumari",
       "name": "Poonam Kumari",
-      "role": "Founder & CEO",
+      "role": "Founder",
       "initials": "PK",
       "bio": "Poonam founded VSJ AI Labs with a vision to build compliance-first AI and enterprise technology that helps organizations modernize operations, improve efficiency, and accelerate digital transformation. She owns business strategy, P&L, client success, partnerships, and organizational growth — keeping every engagement aligned with industry standards, regulatory expectations, and the measurable outcomes customers actually ask for. Her focus is on building VSJ into a long-term, trusted partner for BFSI, Healthcare, and Enterprise SaaS leaders.",
       "expertise": [
@@ -18,29 +18,24 @@
         "Organizational Leadership"
       ],
       "linkedin": null,
-      "avatar": "/team/poonam-kumari.jpg"
+      "avatar": null
     },
     {
-      "slug": "yogesh-kumar-upadhyay",
-      "name": "Yogesh Kumar Upadhyay",
-      "role": "CTO & Head of Delivery",
-      "initials": "YU",
-      "bio": "Yogesh brings 11+ years of hands-on engineering across Banking and Insurance — including microservices for Max Life Insurance policy management at Infosys, partner-bank integrations with Axis and Yes Bank, and cloud-native platforms at Hexaware. At VSJ AI Labs he owns technology strategy, engineering excellence, and cloud modernization alongside delivery governance, program execution, and quality assurance across client engagements — ensuring engineering rigor, on-time releases, and tight collaboration between business and technology teams.",
+      "slug": "ashutosh-kumar-sundram",
+      "name": "Ashutosh Kumar Sundram",
+      "role": "Co-Founder",
+      "initials": "AS",
+      "bio": "Ashutosh co-founded VSJ AI Labs with a shared vision to build compliance-first AI and enterprise technology for regulated industries. He partners with Poonam on business strategy, client success, and organizational growth — helping shape how VSJ engages BFSI, Healthcare, and Enterprise SaaS leaders.",
       "expertise": [
-        "Technology Strategy",
-        "Enterprise Architecture",
-        "Java & Spring Boot",
-        "Microservices Architecture",
-        "AWS (S3, Lambda, CloudWatch)",
-        "Docker · Kubernetes · Jenkins",
-        "MongoDB · Kafka · Redis",
-        "Program & Delivery Governance",
-        "BFSI & Insurance Platforms",
-        "Quality Assurance",
-        "Agile Delivery"
+        "Business Strategy",
+        "Client Success",
+        "Strategic Partnerships",
+        "Digital Transformation",
+        "BFSI & Regulated Industries",
+        "Organizational Leadership"
       ],
-      "linkedin": "https://www.linkedin.com/in/yogesh-upadhyay-57a857b3",
-      "avatar": "/team/yogesh-kumar-upadhyay.png"
+      "linkedin": null,
+      "avatar": null
     }
   ]
 }
