@@ -25,14 +25,17 @@
       "name": "Ashutosh Kumar Sundram",
       "role": "Co-Founder",
       "initials": "AS",
-      "bio": "Ashutosh co-founded VSJ AI Labs with a shared vision to build compliance-first AI and enterprise technology for regulated industries. He partners with Poonam on business strategy, client success, and organizational growth — helping shape how VSJ engages BFSI, Healthcare, and Enterprise SaaS leaders.",
+      "bio": "Ashutosh co-founded VSJ AI Labs bringing a data-first perspective to how modern enterprises build with technology. He holds an MBA in Information Technology with a Data Analytics specialization from Symbiosis Institute of Computer Studies & Research (SICSR), Pune, and combines that with hands-on experience in ETL pipelines, business intelligence, and analytics workflows across Python, SQL, Power BI, Tableau, and Snowflake. At VSJ he partners with Poonam on business strategy, product decisions, and the data-and-analytics side of client engagements — helping shape how VSJ turns raw data into measurable outcomes.",
       "expertise": [
-        "Business Strategy",
-        "Client Success",
-        "Strategic Partnerships",
-        "Digital Transformation",
-        "BFSI & Regulated Industries",
-        "Organizational Leadership"
+        "Data Analytics & BI",
+        "Power BI · Tableau",
+        "Python (Pandas, NumPy, Scikit-learn)",
+        "SQL · PostgreSQL",
+        "ETL & Data Engineering",
+        "Snowflake · Cloud Data Warehousing",
+        "Business Analysis",
+        "Agile · Scrum · JIRA",
+        "MBA — Information Technology"
       ],
       "linkedin": "https://www.linkedin.com/in/ashutoshsundram/",
       "avatar": null
